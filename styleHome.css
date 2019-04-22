@@ -1,0 +1,43 @@
+#mae{
+    background-color:red;
+    width: 100%;
+    height: 1500px;  
+    margin: 100px 0px 0px -8px;
+    position: absolute;
+    z-index: 5;
+}
+
+#cabecalho{
+    background-color: black;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    float: left;
+    color: white;
+    margin: -10px 0px 0px -8px;
+}
+
+#rodape{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    color: white;
+    margin: 1278px 0px 0px 0px;
+    opacity: 0.9;
+}
+
+#rodapeBot{
+    background-color: blue;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    margin: 105px 0px 0px 0px;
+    opacity: 0.5;
+}
+
+#sla1, sla2, sla3 ,sla4{
+    
+    float: left;
+}
