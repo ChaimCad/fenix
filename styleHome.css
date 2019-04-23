@@ -19,12 +19,12 @@
 }
 
 #rodape{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 150px;
-    background-color: black;
-    color: white;
-    margin: 1278px 0px 0px 0px;
+    background-color: white;
+    color: black;
+    bottom:0;
     opacity: 1;
 }
 
@@ -35,18 +35,20 @@
 #rodapeText{
     font-family: arial;
     font-size: 14px;
-    margin: 40px 0px 0px 160px;
+    margin: 43px 0px 0px 160px;
     padding: 0px 1% 0px 1px;
     float: left;
 }
 
 #rodapeBot{
-    background-color: blue;
+    background-color: #CCCCCC25;
     width: 100%;
     height: 45px;
     position: absolute;
     margin: 105px 0px 0px 0px;
-    opacity: 0.5;
+    opacity: 0.9;
+    border-top: solid 0.1px;
+    border-color: lightgray;
 }
 
 #rodapeBotText1{
@@ -60,13 +62,22 @@
     font-size: 12px;
 }
 
-a{
-    color: white;
+#rodapeA{
     text-decoration: none;
+    font-family: arial;
+    color: dodgerblue;
+}
+
+#rodapeA:hover{
+    text-decoration: underline;
     font-family: arial;
 }
 
-a:hover{
+#rodapeBotA{
+    text-decoration: none;
+    color: black;
+}
+
+#rodapeBotA:hover{
     text-decoration: underline;
-    font-family: arial;
 }
