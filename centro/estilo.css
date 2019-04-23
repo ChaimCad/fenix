@@ -1,0 +1,15 @@
+.cabecalho {
+    background-image: url("fenix.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: contrast(70%);
+}
+
+.cabecalho h1{
+
+}
