@@ -23,6 +23,7 @@
 
 #cabLogo{
     margin: 2% 0 0 2%;
+    width: calc(0.1 * 500vw);
 }
 
 #cabImg{
@@ -35,10 +36,10 @@
 }
 
 #cabSearch{
-    position: absolute;
     background-color: red;
-    width: calc(0.075 * 100vw);
-    height: calc(0.075 * 30vw);;
+    width: calc(0.40 * 100vw);
+    height: calc(0.075 * 30vw);
+    margin: 0 0 0 calc(0.2 * 100vw);
 }
 
 /* ===================================================== */
