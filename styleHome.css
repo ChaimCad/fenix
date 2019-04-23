@@ -14,31 +14,18 @@
     z-index: 10;
     position: fixed;
     width: 100%;
-    height: calc(0.075 * 100vw);
+    height: 100px;
     color: black;
     margin: -10px 0px 0px -8px;
-    border-bottom: solid calc(0.075 * 1vw);
+    border-bottom: solid .2px;
     border-color: lightgray;
 }
 
 #cabLogo{
-    margin: 2% 0 0 2%;
-}
-
-#cabImg{
-    width: calc(0.07 * 50vw);
-}
-
-#cabTxt{
-    margin: 0 0 0.8% 1%;
-    width: calc(0.07 * 100vw);
-}
-
-#cabSearch{
-    position: absolute;
     background-color: red;
-    width: calc(0.075 * 100vw);
-    height: calc(0.075 * 30vw);;
+    margin: 25px 0px 0px 25px;
+    width: 50px;
+    height: 50px
 }
 
 /* ===================================================== */
@@ -46,12 +33,12 @@
 #rodape{
     position: absolute;
     width: 100%;
-    height: calc(0.08 * 100vw);;
+    height: 150px;
     background-color: #CCCCCC25;
     color: black;
     bottom:0;
     opacity: 1;
-    border-top: solid calc(0.075 * 0.5vw);
+    border-top: solid 0.1px;
     border-color: #CCCCCCFE;
 }
 
@@ -61,32 +48,32 @@
 
 #rodapeText{
     font-family: arial;
-    font-size: calc(0.08 * 13vw);
-    margin: calc(0.032 * 100vw) 0 0 calc(0.12 * 100vw);
-    padding: 0 1% 0 1;
+    font-size: 14px;
+    margin: 43px 0px 0px 160px;
+    padding: 0px 1% 0px 1px;
     float: left;
 }
 
 #rodapeBot{
     background-color: #CCCCCC25;
     width: 100%;
-    height: calc(0.03 * 100vw);
+    height: 45px;
     position: absolute;
-    margin: calc(0.071 * 100vw) 0 0 0;
+    margin: 105px 0px 0px 0px;
     opacity: 0.9;
-    border-top: solid calc(0.075 * 0.5vw);
+    border-top: solid 0.1px;
     border-color: lightgray;
 }
 
 #rodapeBotText1{
-    margin: 0 0 0 calc(0.08 * 139vw);
+    margin: 0px 0px 0px 150px;
 }
 
 #rodapeBotText1, #rodapeBotText2, #rodapeBotText3 ,#rodapeBotText4{
     float: left;
-    padding: calc(0.08 * 13vw) 1% 0 1%;
+    padding: 15px 1% 0px 1%;
     font-family: arial;
-    font-size: calc(0.08 * 12vw);
+    font-size: 12px;
 }
 
 #rodapeA{
