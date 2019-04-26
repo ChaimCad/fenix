@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HotsitePage } from '../pages/hotsite/hotsite';
 import { HotsitePageModule } from '../pages/hotsite/hotsite.module';
+import { CurriculoPageModule } from '../pages/curriculo/curriculo.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HotsitePageModule } from '../pages/hotsite/hotsite.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HotsitePageModule
+    HotsitePageModule,
+    CurriculoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
