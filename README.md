@@ -1,5 +1,5 @@
 # fenix
-Repositório pra fazer o projeto Fênix
+Repositório pra fazer o projeto Fênix.
 Criar um repositório:
 git init
 Clonar do git:
