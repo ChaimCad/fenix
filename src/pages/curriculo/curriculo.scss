@@ -4,6 +4,7 @@ ion-card {
     width: 60%;
   }
 
+
 page-curriculo {
   
 
@@ -25,6 +26,23 @@ page-curriculo {
     margin-left: 0 auto;
     margin-right: auto;
     padding-top: 50px 
+}
+
+  .botao_perfil{
+    background-color: cornflowerblue;
+    width: 50px;
+    margin-left: 30%;
+    margin-top: 20px;
+    
+  }
+
+#inf{
+  width: 800px;
+  background-color: #FFF;
+  margin-left: auto;
+    margin-right: auto;
+    margin-top: -150px;
+  
 }
     
 }
