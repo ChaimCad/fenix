@@ -1,3 +1,19 @@
+ion-navbar.toolbar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
 page-hotsite {
 
+    #headLogoImg{
+        width: 10%;
+        min-width: 90px;
+        margin: 0.5% 0 0 0; 
+    }   
+    
 }
