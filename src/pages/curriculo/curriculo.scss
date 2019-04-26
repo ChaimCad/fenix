@@ -24,30 +24,48 @@ page-curriculo {
 #img_user{
     width: 120px;
     display: block;
-    margin-left: 0 auto;
+    margin-left: 30px;
     margin-right: auto;
-    padding-top: 30px 
+    padding-top: 15px;
+ 
 }
 
-  .botao_perfil{
+  #botao_perfil{
     background-color: cornflowerblue;
     width: 50px;
     margin-left: 30%;
     margin-top: 20px;
+    text-align: center;
+    padding: 3px;
     
   }
 
 #inf{
   width: 800px;
-  background-color: #FFF;
+  background-color: #104E8B;
   margin-left: auto;
     margin-right: auto;
-    margin-top: -150px;
+    margin-top: -163px;
+    color: #FFF;
   
+}
+
+#teste{
+  float: left;
+  width: 200px;
+  height: 50px;
+  background-color: #104E8B;
 }
 
 .img{
   border-radius: 7%;
 }
-    
+    #alterar{
+      background-color: orange;
+      width: 30px;
+      height: 20px;
+      padding-left: 7px;
+      float: left;
+    }
 }
+
