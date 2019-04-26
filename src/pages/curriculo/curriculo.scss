@@ -6,10 +6,23 @@ ion-card {
 
 page-curriculo {
   
+
+#margem_user
+{
+  margin-left: auto;
+    margin-right: auto;
+  width: 1200px;
+  height: 250px;
+  background: #104E8B;
+  color: #FFF;
+  padding: 20px;
+  border: 5px solid  #104E8B;
+  border-radius: 25px
+}
 #img_user{
     width: 100px;
     display: block;
-    margin-left: auto;
+    margin-left: 0 auto;
     margin-right: auto;
     padding-top: 50px 
 }
