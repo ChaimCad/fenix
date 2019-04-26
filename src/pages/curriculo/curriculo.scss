@@ -1,6 +1,6 @@
 ion-card {
     display: block;
-    //overflow: hidden;
+    overflow: hidden;
     width: 60%;
   }
 
@@ -16,7 +16,7 @@ page-curriculo {
   width: 1200px;
   height: 250px;
   background: #104E8B;
-  color: #FFF;
+   /*color: #FFF;*/
   padding: 20px;
   border: 5px solid  #104E8B;
   border-radius: 25px
@@ -29,7 +29,7 @@ page-curriculo {
   width: 550px;
   height: 300px;
   background: #104E8B;
-  color: #FFF;
+  /*color: #FFF;*/
   padding: 20px;
   border: 5px solid  #104E8B;
   border-radius: 25px
@@ -60,7 +60,7 @@ page-curriculo {
   margin-left: auto;
     margin-right: auto;
     margin-top: -163px;
-    color: #FFF;
+    /*color: #FFF;*/
   
 }
 #inf2{
@@ -91,5 +91,6 @@ page-curriculo {
       padding-left: 7px;
       float: left;
     }
+
 }
 
