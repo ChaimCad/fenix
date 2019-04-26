@@ -1,3 +1,82 @@
+@media screen and (orientation: landscape) {
+    ion-app.md [padding] .scroll-content {
+      padding-left: calc(constant(safe-area-inset-left) + 0px);
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding: 0px calc(env(safe-area-inset-right) + 0px) 0px calc(env(safe-area-inset-left) + 0px);
+    }
+  }
+  
 page-hotsite {
+    .cabecalho {
+        background-image: url("../../assets/imgs/fenix.png");
+        background-position: center center;
+        padding: calc(0.12 * 100vh) calc(0.05 * 100vw);
+        color: #f5fbef;
+        display: flex;
+        background-size: cover;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
+    .cabecalho h1{
+        font-size: calc(0.085 * 100vw);
+        font-family: raleway;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+    .cabecalho h3 {
+        font-size: calc(0.034 * 100vw);
+        font-family: raleway;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .apresentacao{
+        margin-top: 0.8em ;
+        padding: calc(0.09 * 100vh) calc(0.05 * 100vw);
+        -webkit-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        -moz-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        background-color: #db581c;
+        color: #f5fbef;
+    }
+
+    .apresentacao h1{
+        font-family: raleway;
+        font-size: calc(0.03 * 100vw);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        padding-bottom: 0.3em;
+    }
+
+    .apresentacao h2{
+        font-family: raleway;
+        font-size: calc(0.018 * 100vw);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        text-align: justify;
+        line-height: 1.3em;
+    }
+    
+    .motivos{
+        padding: calc(0.09 * 100vh) calc(0.05 * 100vw);
+        color: #f5fbef;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    .apresenta_motivo{
+        background-color: #564d65;
+        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        margin: calc(0.02 * 100vh);
+        -webkit-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        -moz-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        margin-top: calc(-0.02 * 100vw);
+        
+    }
+
+    
 }
