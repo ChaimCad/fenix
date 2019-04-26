@@ -8,7 +8,7 @@ ion-card {
 page-curriculo {
   
 
-#margem_user
+#margem_user1
 {
   margin-top: 50px;
   margin-left: auto;
@@ -21,6 +21,20 @@ page-curriculo {
   border: 5px solid  #104E8B;
   border-radius: 25px
 }
+#margem_user2
+{
+  margin-top: 20px;
+  margin-left: 100px;
+    margin-right: auto;
+  width: 550px;
+  height: 300px;
+  background: #104E8B;
+  color: #FFF;
+  padding: 20px;
+  border: 5px solid  #104E8B;
+  border-radius: 25px
+}
+
 #img_user{
     width: 120px;
     display: block;
@@ -44,6 +58,16 @@ page-curriculo {
     margin-right: auto;
     margin-top: -150px;
   
+}
+#inf2{
+  width: 400px;
+  margin-left: 2%;
+    margin-top: 10px;
+}
+#inf3{
+  margin-left: 45%;
+    margin-top: -26px;
+    float:left
 }
 
 .img{
