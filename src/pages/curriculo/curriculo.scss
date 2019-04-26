@@ -10,6 +10,7 @@ page-curriculo {
 
 #margem_user
 {
+  margin-top: 50px;
   margin-left: auto;
     margin-right: auto;
   width: 1200px;
@@ -21,11 +22,11 @@ page-curriculo {
   border-radius: 25px
 }
 #img_user{
-    width: 100px;
+    width: 120px;
     display: block;
     margin-left: 0 auto;
     margin-right: auto;
-    padding-top: 50px 
+    padding-top: 30px 
 }
 
   .botao_perfil{
@@ -43,6 +44,10 @@ page-curriculo {
     margin-right: auto;
     margin-top: -150px;
   
+}
+
+.img{
+  border-radius: 7%;
 }
     
 }
