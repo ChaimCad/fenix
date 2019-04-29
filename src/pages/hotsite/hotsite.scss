@@ -68,27 +68,112 @@ page-hotsite {
         text-align: center;
     }
 
+    .motivos h1{
+        position: absolute;
+        align-self: flex-start;
+    }
+
     .apresenta_motivo{
         background-color: #564d65;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
         margin: calc(0.02 * 100vh);
-        margin-top: calc(-0.02 * 100vw);
-        background-image: url("../../assets/imgs/motivo.png");
+        background-image: url("../../assets/imgs/motivo1.png");
+        background-position: center center;
+        background-size: cover;
     }
 
     .apresenta_motivo2{
         background-color: #564d65;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
         margin: calc(0.02 * 100vh);
-        margin-top: calc(-0.02 * 100vw);
+        background-image: url("../../assets/imgs/motivo2.jpg");
+        background-position: center center;
+        background-size: cover;
     }
 
     .apresenta_motivo3{
         background-color: #564d65;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
         margin: calc(0.02 * 100vh);
-        margin-top: calc(-0.02 * 100vw);
+        background-image: url("../../assets/imgs/motivo3.jpg");
+        background-position: center center;
+        background-size: cover;
     }
+
+    
+#rodape{
+    width: 100%;
+    height: calc(0.08 * 150vw);;
+    background-color: #ffffff;
+    color: black;
+    bottom:0;
+    opacity: 1;
+    border-top: solid calc(0.075 * 0.5vw);
+    border-color: #f5fbef;
+}
+
+#rodape:hover{
+    opacity: 1;
+}
+
+#rodapeText{
+    font-family: arial;
+    font-size: calc(0.08 * 13vw);
+    margin: calc(0.032 * 145vw) 0 0 calc(0.12 * 100vw);
+    padding: 0 1% 0 1;
+    float: left;
+}
+
+#rodapeTextA{
+    margin: 0 0 calc(-0.1 * 11.5vw) 0;
+}
+
+#rodapeTextB{
+    margin: 0 0 0 calc(0.5 * 38vw);
+}
+
+#rodapeBot{
+    background-color: #CCCCCC25;
+    width: 100%;
+    height: calc(0.03 * 120vw);
+    position: absolute;
+    margin: calc(0.071 * 150vw) 0 0 0;
+    opacity: 0.9;
+    border-top: solid calc(0.075 * 0.5vw);
+    border-color: lightgray;
+}
+
+#rodapeBotText1{
+    margin: 0 0 0 calc(0.08 * 139vw);
+}
+
+#rodapeBotText1, #rodapeBotText2, #rodapeBotText3 ,#rodapeBotText4{
+    float: left;
+    padding: calc(0.08 * 16vw) 1% 0 1%;
+    font-family: arial;
+    font-size: calc(0.08 * 12vw);
+}
+
+#rodapeA{
+    margin: 0 0 0 calc(0.5 * 73vw);
+    text-decoration: none;
+    font-family: arial;
+    color: dodgerblue;
+}
+
+#rodapeA:hover{
+    text-decoration: underline;
+    font-family: arial;
+}
+
+#rodapeBotA{
+    text-decoration: none;
+    color: black;
+}
+
+#rodapeBotA:hover{
+    text-decoration: underline;
+}
 
     
 }
