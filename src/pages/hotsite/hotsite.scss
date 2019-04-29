@@ -58,17 +58,22 @@ page-hotsite {
     }
     
     .motivos{
-        padding: calc(0.09 * 100vh) calc(0.05 * 100vw);
+        padding: calc(0.09 * 80vh) calc(0.05 * 100vw);
         color: #f5fbef;
-        background-color: #564d65;
+        background-color: #2f283a;
         display: flex;
         justify-content: center;
         flex-direction: row;
         align-items: center;
         text-align: center;
+        flex-wrap: wrap;
     }
 
-    .motivos h1{
+    #questao{
+        color: #f5fbef;
+        font-size: calc(0.025 * 100vw);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        margin-bottom: -2em;
         position: absolute;
         align-self: flex-start;
     }
@@ -76,16 +81,16 @@ page-hotsite {
     .apresenta_motivo{
         background-color: #564d65;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
-        margin: calc(0.02 * 100vh);
+        margin: 5em 0 0 calc(0.032 * 100vh);
         background-image: url("../../assets/imgs/motivo1.png");
         background-position: center center;
         background-size: cover;
     }
 
     .apresenta_motivo2{
-        background-color: #564d65;
+        background-color: #605474;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
-        margin: calc(0.02 * 100vh);
+        margin: 5em 0 0 calc(0.032 * 100vh);
         background-image: url("../../assets/imgs/motivo2.jpg");
         background-position: center center;
         background-size: cover;
@@ -94,12 +99,53 @@ page-hotsite {
     .apresenta_motivo3{
         background-color: #564d65;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
-        margin: calc(0.02 * 100vh);
+        margin: 5em 0 0 calc(0.032 * 100vh);
         background-image: url("../../assets/imgs/motivo3.jpg");
         background-position: center center;
         background-size: cover;
     }
 
+    .motivo1{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.02 * 100vh);
+    }
+    .motivo1 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo1 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+
+    .motivo2{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.035 * 100vh);
+    }
+    .motivo2 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo2 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+
+    .motivo3{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.035 * 100vh);
+    }
+    .motivo3 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo3 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
     
 #rodape{
     width: 100%;
@@ -155,7 +201,6 @@ page-hotsite {
 }
 
 #rodapeA{
-    margin: 0 0 0 calc(0.5 * 73vw);
     text-decoration: none;
     font-family: arial;
     color: dodgerblue;
