@@ -1,3 +1,5 @@
+
+
 page-hotsite {
     ion-navbar.toolbar {
         display: -webkit-box;
@@ -15,9 +17,45 @@ page-hotsite {
 
       #headLogo{
           /*width: 5%;*/
-          margin: 0.5% 0% 0% 0%;
+          margin: 0.5% 0% 0% 12%;
           width: 10%;
           min-width: 100px;
+      }
+
+      #headLogin{
+        float: right;
+        margin: 1.5% 1% 0 0;
+        background: #db581c;
+        background-image: -webkit-linear-gradient(top, #db581c, #db581c);
+        background-image: -moz-linear-gradient(top, #db581c, #db581c);
+        background-image: -ms-linear-gradient(top, #db581c, #db581c);
+        background-image: -o-linear-gradient(top, #db581c, #db581c);
+        background-image: linear-gradient(to bottom, #db581c, #db581c);
+        -webkit-border-radius: 5;
+        -moz-border-radius: 5;
+        border-radius: 5px;
+        text-shadow: 1px 1px 3px #666666;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 7px 15px 7px 15px;
+        text-decoration: none;
+      }
+
+      @media screen and (max-width:600px){
+        #headLogin{
+          margin: 3.5% 1% 0 0;
+        }
+      }
+
+      #headLogin:hover{
+        background: #dbdbdb;
+        background-image: -webkit-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: -moz-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: -ms-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: -o-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: linear-gradient(to bottom, #dbdbdb, #dbdbdb);
+        text-decoration: none;
       }
 
 }
