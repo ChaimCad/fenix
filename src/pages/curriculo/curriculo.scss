@@ -4,14 +4,109 @@ ion-card {
     width: 60%;
   }
 
+
 page-curriculo {
   
-#img_user{
-    width: 100px;
-    display: block;
-    margin-left: auto;
+
+#margem_user1
+{
+  margin-top: 50px;
+  margin-left: auto;
     margin-right: auto;
-    padding-top: 50px 
+  width: 1200px;
+  height: 250px;
+  background: #104E8B;
+   /*color: #FFF;*/
+  padding: 20px;
+  border: 5px solid  #104E8B;
+  border-radius: 25px
 }
+#margem_user2
+{
+  margin-top: 20px;
+  margin-left: 100px;
+    margin-right: auto;
+  width: 550px;
+  height: 300px;
+  background: #104E8B;
+  /*color: #FFF;*/
+  padding: 20px;
+  border: 5px solid  #104E8B;
+  border-radius: 25px
+}
+
+#img_user{
+    width: 120px;
+    display: block;
+    margin-left: 30px;
+    margin-right: auto;
+    padding-top: 15px;
+ 
+}
+
+  a.botao_perfil{
+    background-color: cornflowerblue;
+    width: 50px;
+    margin-left: 30%;
+    text-align: center;
+    padding: 3px;
+    color: black;
+    margin-top: 50px
     
+  }
+
+  a:hover.botao_perfil{
+    background-color: azure;
+  }
+
+
+#inf{
+  width: calc(0.1 * 570vw);
+  background-color: #104E8B;
+  margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(-0.1 * 115vw);;
+    /*color: #FFF;*/
+  
 }
+#inf2{
+  width: 400px;
+  margin-left: 2%;
+    margin-top: 10px;
+}
+#inf3{
+  margin-left: 45%;
+    margin-top: -26px;
+    float:left
+}
+
+#teste{
+  float: left;
+  width: 200px;
+  height: 50px;
+  background-color: #104E8B;
+}
+
+.img{
+  border-radius: 7%;
+ }
+    #alterar{
+      background-color: orange;
+      width: 30px;
+      height: 20px;
+      padding-left: 7px;
+      float: left;
+    }
+
+
+    .caixa{
+      border: 0;
+      background-color: #104E8B;
+      color: white;
+      font-weight: bold;
+      font-size: 23px;
+    }
+
+}
+
+
