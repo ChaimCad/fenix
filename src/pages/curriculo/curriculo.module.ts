@@ -10,4 +10,8 @@ import { CurriculoPage } from './curriculo';
     IonicPageModule.forChild(CurriculoPage),
   ],
 })
-export class CurriculoPageModule {}
+export class CurriculoPageModule {
+
+
+}
+

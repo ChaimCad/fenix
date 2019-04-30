@@ -7,34 +7,13 @@ ion-card {
 
 
 page-curriculo {
-  a.botao_perfil {
-    background-color: cornflowerblue;
-    width: 50px;
-    margin-bottom: 50px;
-    margin-left: 30%;
-    text-align: center;
-    padding: 3px;
-    color: black;
-    margin-top: 50px
-
-    
-  }
+ 
 
   a:hover.botao_perfil {
     background-color: azure;
   }
 
-  #inf2 {
-    width: 400px;
-    margin-left: 2%;
-    margin-top: 10px;
-  }
-
-  #inf3 {
-    margin-left: 45%;
-    margin-top: -26px;
-    float:left
-  }
+  
 
 
   @media screen and (min-width:1300px) {
@@ -50,6 +29,19 @@ page-curriculo {
       border-radius: 25px;
     }
 
+    a.botao_perfil {
+      background-color: cornflowerblue;
+      width: 50px;
+      margin-bottom: 50px;
+      margin-left: 30%;
+      text-align: center;
+      padding: 3px;
+      color: black;
+      margin-top: 50px;
+      text-decoration: none;
+  
+      
+    }
     #margem_user2 {
       margin-top: 20px;
       margin-left: 7vw;
@@ -85,10 +77,12 @@ page-curriculo {
       width: 28px;
       height: 3vh;
       text-align: center;
+      color: white;
       margin-left: 13vw;
       margin-top: 1vh;
       float: left;
       margin-top: 8vh; 
+      padding-top: 2px;
     }
 
     .caixa {
@@ -98,8 +92,15 @@ page-curriculo {
       background-color: #104E8B;
       color: white;
       font-weight: bold;
-      font-size: 23px;
-      width: 180px;
+      font-size: 27px;
+      width: 300px;
+      margin-top: 42px;
+    }
+
+    #informacoes{
+      margin-top: 3px; 
+      margin-left: 12vw;
+      color: white;
     }
 
     #img_user {
@@ -121,12 +122,35 @@ page-curriculo {
       margin-top: calc(-0.1 * 140vw);;
       //color: #FFF;
     }
+
+    #inf2 {
+      width: 100px;
+      margin-left: 2%;
+      margin-top: 10px;
+      padding-top: 30px; 
+    }
+  
+    #inf3 {
+      margin-left: 45%;
+      margin-top: -26px;
+      float:left;
+     
+    }
+
+    #inf4 {
+      width: 400px;
+      margin-left: 2%;
+      margin-top: 10px;
+      padding-top: 30px; 
+    }
+  
+    
   }
 
   @media screen and (max-width:1300px) {
     #margem_user1 {
       margin-top: 10px;
-      width: 77vw;
+      width: 77%;
       height: 25vh;
       margin-left: 5vw;
       background: #104E8B;
@@ -182,13 +206,7 @@ page-curriculo {
       width: 150px;
     }
 
-    #img_user {
-      width: 140px;
-      display: block;
-      margin-left: 15px;
-      margin-right: auto;
-      padding-top: 15px;
-    }
+    
 
     .img {
       border-radius: 7%;
@@ -202,7 +220,7 @@ page-curriculo {
       margin-top: -100px;
       //color: #FFF;
     }
-  }
+  
 
   #teste {
     float: left;
@@ -210,18 +228,18 @@ page-curriculo {
     height: 50px;
     background-color: #104E8B;
   }
-}
+
   
 
 #margem_user1
 {
-  margin-top: 50px;
-  margin-left: auto;
+  margin-top: 20px;
+  margin-left: 100px;
     margin-right: auto;
-  width: 1200px;
-  height: 250px;
+  width: 550px;
+  height: 300px;
   background: #104E8B;
-   /*color: #FFF;*/
+  /*color: #FFF;*/
   padding: 20px;
   border: 5px solid  #104E8B;
   border-radius: 25px
@@ -267,7 +285,7 @@ page-curriculo {
     margin-top: -163px;
     /*color: #FFF;*/
   
-}
+ }
 #inf2{
   width: 400px;
   margin-left: 2%;
@@ -277,6 +295,12 @@ page-curriculo {
   margin-left: 45%;
     margin-top: -26px;
     float:left
+}
+
+#inf4{
+  width: 400px;
+  margin-left: 2%;
+    margin-top: 10px;
 }
 
 #teste{
@@ -289,11 +313,13 @@ page-curriculo {
 .img{
   border-radius: 7%;
 }
-    #alterar{
+    
+ #alterar{
       background-color: orange;
       width: 30px;
       height: 20px;
       padding-left: 7px;
       float: left;
     }
+ }
 }
