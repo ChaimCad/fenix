@@ -16,7 +16,6 @@ ion-navbar.toolbar {
       padding: 0px calc(env(safe-area-inset-right) + 0px) 0px calc(env(safe-area-inset-left) + 0px);
     }
   }
-
 page-hotsite {
     .cabecalho {
         background-image: url("../../assets/imgs/fenix.png");
@@ -73,6 +72,8 @@ page-hotsite {
     }
     
     .motivos{
+        padding: calc(0.09 * 100vh) calc(0.05 * 100vw);
+        color: #f5fbef;
         padding: calc(0.09 * 80vh) calc(0.05 * 100vw);
         color: #f5fbef;
         background-color: #2f283a;
@@ -96,6 +97,13 @@ page-hotsite {
     .apresenta_motivo{
         background-color: #564d65;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        margin: calc(0.02 * 100vh);
+        -webkit-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        -moz-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        margin-top: calc(-0.02 * 100vw);
+        
+    }
         margin: 5em 0 0 calc(0.032 * 100vh);
         background-image: url("../../assets/imgs/motivo1.png");
         background-position: center center;
