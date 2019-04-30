@@ -16,7 +16,6 @@ ion-navbar.toolbar {
       padding: 0px calc(env(safe-area-inset-right) + 0px) 0px calc(env(safe-area-inset-left) + 0px);
     }
   }
-  
 page-hotsite {
     .cabecalho {
         background-image: url("../../assets/imgs/fenix.png");
@@ -75,11 +74,24 @@ page-hotsite {
     .motivos{
         padding: calc(0.09 * 100vh) calc(0.05 * 100vw);
         color: #f5fbef;
+        padding: calc(0.09 * 80vh) calc(0.05 * 100vw);
+        color: #f5fbef;
+        background-color: #2f283a;
         display: flex;
         justify-content: center;
         flex-direction: row;
         align-items: center;
         text-align: center;
+        flex-wrap: wrap;
+    }
+
+    #questao{
+        color: #f5fbef;
+        font-size: calc(0.025 * 100vw);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        margin-bottom: -2em;
+        position: absolute;
+        align-self: flex-start;
     }
 
     .apresenta_motivo{
@@ -92,5 +104,143 @@ page-hotsite {
         margin-top: calc(-0.02 * 100vw);
         
     }
+        margin: 5em 0 0 calc(0.032 * 100vh);
+        background-image: url("../../assets/imgs/motivo1.png");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .apresenta_motivo2{
+        background-color: #605474;
+        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        margin: 5em 0 0 calc(0.032 * 100vh);
+        background-image: url("../../assets/imgs/motivo2.jpg");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .apresenta_motivo3{
+        background-color: #564d65;
+        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        margin: 5em 0 0 calc(0.032 * 100vh);
+        background-image: url("../../assets/imgs/motivo3.jpg");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .motivo1{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.02 * 100vh);
+    }
+    .motivo1 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo1 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+
+    .motivo2{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.035 * 100vh);
+    }
+    .motivo2 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo2 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+
+    .motivo3{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.035 * 100vh);
+    }
+    .motivo3 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo3 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+    
+#rodape{
+    width: 100%;
+    height: calc(0.08 * 150vw);;
+    background-color: #ffffff;
+    color: black;
+    bottom:0;
+    opacity: 1;
+    border-top: solid calc(0.075 * 0.5vw);
+    border-color: #f5fbef;
+}
+
+#rodape:hover{
+    opacity: 1;
+}
+
+#rodapeText{
+    font-family: arial;
+    font-size: calc(0.08 * 13vw);
+    margin: calc(0.032 * 145vw) 0 0 calc(0.12 * 100vw);
+    padding: 0 1% 0 1;
+    float: left;
+}
+
+#rodapeTextA{
+    margin: 0 0 calc(-0.1 * 11.5vw) 0;
+}
+
+#rodapeTextB{
+    margin: 0 0 0 calc(0.5 * 38vw);
+}
+
+#rodapeBot{
+    background-color: #CCCCCC25;
+    width: 100%;
+    height: calc(0.03 * 120vw);
+    position: absolute;
+    margin: calc(0.071 * 150vw) 0 0 0;
+    opacity: 0.9;
+    border-top: solid calc(0.075 * 0.5vw);
+    border-color: lightgray;
+}
+
+#rodapeBotText1{
+    margin: 0 0 0 calc(0.08 * 139vw);
+}
+
+#rodapeBotText1, #rodapeBotText2, #rodapeBotText3 ,#rodapeBotText4{
+    float: left;
+    padding: calc(0.08 * 16vw) 1% 0 1%;
+    font-family: arial;
+    font-size: calc(0.08 * 12vw);
+}
+
+#rodapeA{
+    text-decoration: none;
+    font-family: arial;
+    color: dodgerblue;
+}
+
+#rodapeA:hover{
+    text-decoration: underline;
+    font-family: arial;
+}
+
+#rodapeBotA{
+    text-decoration: none;
+    color: black;
+}
+
+#rodapeBotA:hover{
+    text-decoration: underline;
+}
 
 }
