@@ -7,5 +7,23 @@
 </ion-header>
 
 <ion-content padding>
+  <form OnSubmit="javascript: caixa();">
+   <input type="text" id="area">
+    <input type="submit" value="criar">
+  </form>
+
+
+
+  <script type="text/javascript">
+    function caixa() {
+    var textbox = document.createElement('input');
+    textbox.type = 'text'; 
+    //document.getElementById('area');
+    document.body.appendChild(textbox);
+    //var clone = document.getElementById('area').cloneNode(true);
+    //destino.appendChild (clone);
+    //var camposClonados = clone.getElementsByTagName('input');
+  }
+ </script>
 
 </ion-content>
