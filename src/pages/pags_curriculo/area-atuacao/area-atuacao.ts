@@ -22,4 +22,6 @@ export class AreaAtuacaoPage {
     console.log('ionViewDidLoad AreaAtuacaoPage');
   }
 
+  
+
 }
