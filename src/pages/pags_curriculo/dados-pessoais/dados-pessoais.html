@@ -14,58 +14,58 @@
 
 <ion-list> 
 
-<form >
+<form [formGroup]="formulario">
 
   <ion-item padding>
     <ion-label>Nome:</ion-label>
-    <ion-input type="text" [value]="nome" ></ion-input>
+    <ion-input type="text" [value]="nome" formControlName="nome"></ion-input>
   </ion-item>
 
 
 <ion-item padding>
   <ion-label>Sobrenome:</ion-label>
-  <ion-input type="text" [value]="sobrenome" ></ion-input>
+  <ion-input type="text" [value]="sobrenome"formControlName="sobrenome" ></ion-input>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Sexo:</ion-label>
-      <ion-select cancelText="Cancelar" name = "sexo">
+      <ion-select cancelText="Cancelar" name = "sexo" formControlName="sexo">
         <ion-option *ngFor="let sexos of sexo" [value]="sexos">{{sexos}}</ion-option>
       </ion-select>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Email:</ion-label>
-    <ion-input type="email" [value]="email" ></ion-input>
+    <ion-input type="email" [value]="email" formControlName="email"></ion-input>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Telefone:</ion-label>
-    <ion-input type="text" [value]="telefone"></ion-input>
+    <ion-input type="text" [value]="telefone" formControlName="telefone"></ion-input>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Celular:</ion-label>
-    <ion-input type="text" [value]="celular" ></ion-input>
+    <ion-input type="text" [value]="celular" formControlName="celular"></ion-input>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Estado civil:</ion-label>
-      <ion-select cancelText="Cancelar" >
-        <ion-option *ngFor="let estado of estado_civil" [value]="estado">{{estado}}</ion-option>
+      <ion-select cancelText="Cancelar" formControlName="estado_civil">
+        <ion-option *ngFor="let estado of estado_civil" [value]="estado_civil">{{estado}}</ion-option>
       </ion-select>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Filhos:</ion-label>
-      <ion-select cancelText="Cancelar" >
-        <ion-option *ngFor="let filhos of filho" [value]="filhos">{{filhos}}</ion-option>
+      <ion-select cancelText="Cancelar" formControlName="filhos">
+        <ion-option *ngFor="let filhos of filho" [value]="filhos" >{{filhos}}</ion-option>
       </ion-select>
 </ion-item>
 
 <ion-item padding>
   <ion-label>Data de nascimento:</ion-label>
-  <ion-datetime (click)="RetornaDataAtual()"displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [min]="max_idade" [max]="min_idade" cancelText="Cancelar" doneText="OK"></ion-datetime>
+  <ion-datetime (click)="RetornaDataAtual()"displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [min]="max_idade" [max]="min_idade" cancelText="Cancelar" doneText="OK" formControlName="data_nasc"></ion-datetime>
 </ion-item>
 
 

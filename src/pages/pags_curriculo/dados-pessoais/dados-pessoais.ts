@@ -45,23 +45,24 @@ export class DadosPessoaisPage {
     this.ano = dNow.getFullYear()
     //console.log(this.ano)
 
-    //var localdate = data + '-' + mes + '-' + ano;
+    
      this.min_idade = ((this.ano-18) + '-' + this.mes + '-' + this.data).toString();
-    //console.log(this.min_idade)
-    //return this.min_idade
+   
     this.max_idade = ((this.ano-90) + '-' + this.mes + '-' + this.data).toString();
-    //console.log(this.max_idade)
-    //return this.max_idade
-   // min_idade.toString()
-   // max_idade.toString()
-    //console.log(min_idade)
-   // console.log(localdate)
+   
     
   }
 
   public formulario:FormGroup = new FormGroup({
-    'nome' : new FormControl(null)
-
+    'nome' : new FormControl(null),
+    'sobrenome': new FormControl(null),
+    'sexo': new FormControl(null),
+    'email': new FormControl(null),
+    'telefone': new FormControl(null),
+    'celular': new FormControl(null),
+    'estado_civil': new FormControl(null),
+    'filhos': new FormControl(null),
+    'data_nasc': new FormControl(null),
   })
 
   public estado_civil: Array<string> = [

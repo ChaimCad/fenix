@@ -8,23 +8,15 @@ import { HomePage } from '../pages/home/home';
 import { HotsitePage } from '../pages/hotsite/hotsite';
 import { CurriculoPage } from '../pages/curriculo/curriculo';
 import { Curriculo1Page } from '../pages/pags_curriculo/curriculo1/curriculo1';
-<<<<<<< HEAD
-import { ContactPage } from '../pages/contact/contact';
-=======
 import { AboutPage } from '../pages/about/about';
 import { DadosPessoaisPage } from '../pages/pags_curriculo/dados-pessoais/dados-pessoais';
 
->>>>>>> eba5e3dec7ecf48032281b4fa8c02ae8a8121ed6
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
-  rootPage:any = ContactPage;
-=======
-  rootPage:any = AboutPage;
->>>>>>> eba5e3dec7ecf48032281b4fa8c02ae8a8121ed6
+  rootPage:any = DadosPessoaisPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
