@@ -7,12 +7,13 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { HotsitePage } from '../pages/hotsite/hotsite';
 import { CurriculoPage } from '../pages/curriculo/curriculo';
+import { Curriculo1Page } from '../pages/pags_curriculo/curriculo1/curriculo1';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any = Curriculo1Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
