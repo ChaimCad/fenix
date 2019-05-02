@@ -23,6 +23,7 @@ import { InfoAddPageModule } from '../pages/pags_curriculo/info-add/info-add.mod
 import { QualificacoesPageModule } from '../pages/pags_curriculo/qualificacoes/qualificacoes.module';
 import { ReactiveFormsModule } from '@angular/forms'
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     Curriculo1PageModule,
     InfoAddPageModule,
     QualificacoesPageModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

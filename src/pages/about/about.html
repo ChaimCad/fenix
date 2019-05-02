@@ -7,13 +7,22 @@
 </ion-header>
 
 <ion-content padding>
-  <form OnSubmit="javascript: caixa();">
+  
+  
+  <div id="caixa_txt">
+      
    <input type="text" id="area">
-    <input type="submit" value="criar">
-  </form>
+   <button ion-button (click)="Caixa()" style="margin-left: 50px;">Adicionar</button>
+ 
+     <ion-list *ngFor="let caixas of textbox">
+ 
+       {{caixas}}
+ 
+     </ion-list>
+  </div>
 
 
-
+<!--
   <script type="text/javascript">
     function caixa() {
     var textbox = document.createElement('input');
@@ -25,5 +34,6 @@
     //var camposClonados = clone.getElementsByTagName('input');
   }
  </script>
+-->
 
 </ion-content>
