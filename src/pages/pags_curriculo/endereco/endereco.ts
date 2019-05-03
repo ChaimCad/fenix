@@ -5,6 +5,7 @@ import { Endereco } from '../endereco/endereco-model'
 
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
 import { FormacaoPage } from '../formacao/formacao';
+import { QualificacoesPage } from '../qualificacoes/qualificacoes';
 
 
 
@@ -59,6 +60,11 @@ export class EnderecoPage {
   goToPage3(){
 
     this.navCtrl.push(FormacaoPage);
+  }
+
+  goToPage5(){
+    
+    this.navCtrl.push(QualificacoesPage);
   }
 
 }
