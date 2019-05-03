@@ -31,9 +31,10 @@ export class IntroPage {
 
   presentLoading() {
     this.loader = this.loadingCtrl.create({
-     // content: "Por favor aguarde...",
-
-     spinner:'circles',
+     // 
+     //content: "Por favor aguarde...",
+    
+     spinner:'crescent',
 
       dismissOnPageChange: true
      

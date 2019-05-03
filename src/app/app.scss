@@ -14,3 +14,26 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-spinner {
+    width: 70px !important;
+    height: 70px !important;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    stroke: orangered;
+    fill: orangered;
+    --spinner-color:orangered;
+    color: orangered;
+    $loading-ios-spinner-crescent-color: orangered;
+}
+
+.loading-wrapper {
+    height: 0%;
+    width: 0%;
+    padding: 0 !important;
+    max-height: 0% !important;
+    max-width: 0% !important;
+    justify-content: center;
+}

@@ -3,17 +3,25 @@ page-intro {
     .container{
         width: 90vw;
         height: 80vh;
-        background: #fff;
+        background: #ffffff;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
     .img{
-      
-        width: 200px;
-        height: 200px;
-        background: #fff;
+        width: 34.6vw;
+        height: 70.92vh;
+        background: #ffffff
     }
 
+    @media screen and (max-width: 600px){
+        .img{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
+    }
 }
