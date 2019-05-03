@@ -10,13 +10,14 @@ import { CurriculoPage } from '../pages/curriculo/curriculo';
 import { Curriculo1Page } from '../pages/pags_curriculo/curriculo1/curriculo1';
 import { AboutPage } from '../pages/about/about';
 import { DadosPessoaisPage } from '../pages/pags_curriculo/dados-pessoais/dados-pessoais';
+import { EnderecoPage } from '../pages/pags_curriculo/endereco/endereco';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = DadosPessoaisPage;
+  rootPage:any = EnderecoPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

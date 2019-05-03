@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormControl, FormGroup } from '@angular/forms';
+import { EnderecoPage } from '../endereco/endereco'
 
 /**
  * Generated class for the DadosPessoaisPage page.
@@ -62,7 +63,7 @@ export class DadosPessoaisPage {
     'celular': new FormControl(null),
     'estado_civil': new FormControl(null),
     'filhos': new FormControl(null),
-    'data_nasc': new FormControl(null),
+    'data_nasc': new FormControl(null)
   })
 
   public estado_civil: Array<string> = [
@@ -79,16 +80,18 @@ export class DadosPessoaisPage {
     'Outro'
   ]
 
+  goToPage2(){
+    this.navCtrl.push(EnderecoPage);
+  }
+
   public filho:Array<string> = ['0','1','2','3','4+']
   
-  
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DadosPessoaisPage');
-    this.RetornaDataAtual()
+    //this.RetornaDataAtual()
   }
 
 }

@@ -22,6 +22,8 @@ import { Curriculo1PageModule } from '../pages/pags_curriculo/curriculo1/curricu
 import { InfoAddPageModule } from '../pages/pags_curriculo/info-add/info-add.module';
 import { QualificacoesPageModule } from '../pages/pags_curriculo/qualificacoes/qualificacoes.module';
 import { ReactiveFormsModule } from '@angular/forms'
+import { EnderecoPageModule } from '../pages/pags_curriculo/endereco/endereco.module';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     InfoAddPageModule,
     QualificacoesPageModule,
     ReactiveFormsModule,
-    
+    EnderecoPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 
 /*
@@ -10,8 +10,16 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ApiCepProvider {
 
-  constructor(public http: HttpClient) {
+  private APIPath:string = "https://viacep.com.br/ws/"
+
+  constructor(public http: Http) {
     console.log('Hello ApiCepProvider Provider');
+  }
+
+  public getCEP(cep:string){
+   
+    return this.http.get(this.APIPath + cep + "/json/");
+    
   }
 
 }
