@@ -18,32 +18,34 @@
   <!--(ngSubmit)="goToPage2()"-->
 
   <ion-item padding>
-    <ion-label>Nome:</ion-label>
-    <ion-input type="text" formControlName="nome" ngModel pattern="[a-zA-Z ]* "></ion-input>
-    
+    <ion-label id="lbl_nome">Nome:</ion-label>
+    <ion-input type="text" formControlName="nome" (ionFocus)="Valida_nome()" (keyup)="Valida_nome()"></ion-input>
   </ion-item>
+  <!--<small *ngIf="formulario.get('nome').valid && formulario.get('nome').touched" >OK!</small>
+  <small *ngIf="!formulario.get('nome').valid && formulario.get('nome').touched">Erro!</small>-->
+ 
 
 
 <ion-item padding>
-  <ion-label>Sobrenome:</ion-label>
-  <ion-input type="text" [value]="sobrenome" formControlName="sobrenome" ></ion-input>
+  <ion-label id="lbl_sobrenome">Sobrenome:</ion-label>
+  <ion-input type="text" formControlName="sobrenome" (keyup)="Valida_sobrenome()" (ionFocus)="Valida_sobrenome()" ></ion-input>
 </ion-item>
 
 <ion-item padding>
-    <ion-label>Sexo:</ion-label>
-      <ion-select cancelText="Cancelar" name = "sexo" formControlName="sexo">
-        <ion-option *ngFor="let sexos of sexo" [value]="sexos">{{sexos}}</ion-option>
+    <ion-label id="lbl_sexo">Sexo:</ion-label>
+      <ion-select cancelText="Cancelar"  (ionFocus)="Valida_sexo()" (ionBlur)="Valida_sexo()" formControlName="sexo">
+        <ion-option *ngFor="let sexos of sexo" >{{sexos}}</ion-option>
       </ion-select>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Email:</ion-label>
-    <ion-input type="email" [value]="email" formControlName="email"></ion-input>
+    <ion-input type="email" formControlName="email"></ion-input>
 </ion-item>
 
 <ion-item padding>
     <ion-label>Telefone:</ion-label>
-    <ion-input type="text" [value]="telefone" formControlName="telefone"></ion-input>
+    <ion-input type="text" ngModel pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" formControlName="telefone"></ion-input>
 </ion-item>
 
 <ion-item padding>
