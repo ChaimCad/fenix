@@ -50,12 +50,12 @@ export class FormacaoPage {
     'Ensino Superior'
   ]
 
+ 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad FormacaoPage');
+  }
   goToPage4(){
     
     this.navCtrl.push(AreaAtuacaoPage);
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FormacaoPage');
-  }
-
 }

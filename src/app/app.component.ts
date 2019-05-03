@@ -15,6 +15,7 @@ import { EnderecoPage } from '../pages/pags_curriculo/endereco/endereco';
 import { AreaAtuacaoPage } from '../pages/pags_curriculo/area-atuacao/area-atuacao';
 
 import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
+import { QualificacoesPage } from '../pages/pags_curriculo/qualificacoes/qualificacoes';
 
 
 

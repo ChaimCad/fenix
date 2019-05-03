@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { QualificacoesPage } from '../qualificacoes/qualificacoes';
 
 /**
  * Generated class for the AreaAtuacaoPage page.
@@ -22,6 +23,9 @@ export class AreaAtuacaoPage {
     console.log('ionViewDidLoad AreaAtuacaoPage');
   }
 
-  
+  goToPage5(){
+
+    this.navCtrl.push(QualificacoesPage);
+  }
 
 }
