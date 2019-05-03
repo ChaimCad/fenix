@@ -11,7 +11,7 @@ export class AboutPage {
 
   }
 
-  public Caixa(){
+ /* public Caixa(){
 
   
 
@@ -34,6 +34,6 @@ export class AboutPage {
     //var clone = document.getElementById('area').cloneNode(true);
     //destino.appendChild (clone);
     //var camposClonados = clone.getElementsByTagName('input');
-  }
+  }*/
 
 }
