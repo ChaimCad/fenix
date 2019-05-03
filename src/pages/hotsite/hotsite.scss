@@ -6,6 +6,9 @@
       padding: 0px calc(env(safe-area-inset-right) + 0px) 0px calc(env(safe-area-inset-left) + 0px);
     }
   }
+  ion-app.md [padding] .scroll-content {
+    padding: 0px; 
+ }
   
 
 page-hotsite {
@@ -59,7 +62,8 @@ page-hotsite {
     }
     
     .motivos{
-        padding: calc(0.09 * 80vh) calc(0.05 * 100vw);
+        height: calc(1.1 * 100vh);
+        width: calc(1 * 100vw);
         color: #f5fbef;
         background-color: #011627;
         display: flex;
@@ -74,9 +78,9 @@ page-hotsite {
         color: #f5fbef;
         font-size: calc(0.025 * 100vw);
         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        margin-bottom: -2em;
         position: absolute;
         align-self: flex-start;
+        margin-top: 1em;
     }
 
     .apresenta_motivo{
@@ -280,6 +284,160 @@ ion-navbar.toolbar {
     text-decoration: none;
   }
 
-    
-}
+  @media screen and (max-width: 1032px) {
+    #questao{
+        font-size: calc(0.025 * 100vw);
+        position: absolute;
+        align-self: flex-start;
+        margin-top: 1.4em;
+    }
 
+    .motivos{
+        height: calc(0.8 * 100vh);
+        width: calc(1 * 100vw);
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    
+    .cabecalho {
+        background-image: url("../../assets/imgs/fenix.png");
+        background-position: center center;
+        padding: calc(0.2 * 100vh) calc(0.05 * 100vw);
+        color: #f5fbef;
+        display: flex;
+        background-size: cover;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cabecalho h1{
+        font-size: calc(0.24 * 100vw);
+        font-family: raleway;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+    .cabecalho h3 {
+        font-size: calc(0.07 * 100vw);
+        font-family: raleway;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .apresentacao{
+        margin-top: 1.5em;
+        padding: calc(0.1 * 100vh) calc(0.05 * 100vw);
+        background-color: #db581c;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresentacao h1:first-child{
+        font-family: raleway;
+        font-size: calc(0.1 * 100vw);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        padding-bottom: 0.5em;
+        
+    }
+
+    .apresentacao h2{
+        font-family: raleway;
+        font-size: calc(0.055 * 100vw);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        text-align: justify;
+        line-height: 1.4em;
+    }
+
+    .motivos{
+        height: calc(1.1 * 100vh);
+        width: calc(1 * 100vw);
+        color: #f5fbef;
+        background-color: #011627;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #questao{
+        color: #f5fbef;
+        font-size: calc(0.07 * 100vw);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .apresenta_motivo{
+        padding: calc(0.2 * 100vh) calc(0.4 * 100vw);
+        background-image: url("../../assets/imgs/motivo1.png");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .apresenta_motivo2{
+        background-color: #605474;
+        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        background-image: url("../../assets/imgs/motivo2.jpg");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .apresenta_motivo3{
+        background-color: #564d65;
+        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        background-image: url("../../assets/imgs/motivo3.jpg");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .motivo1{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.02 * 100vh);
+    }
+    .motivo1 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo1 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+
+    .motivo2{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.035 * 100vh);
+    }
+    .motivo2 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo2 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+
+    .motivo3{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.035 * 100vh);
+    }
+    .motivo3 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo3 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
+    }
+
+  }
+   
+}

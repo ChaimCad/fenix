@@ -1,5 +1,7 @@
 {
   "name": "fenix",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
