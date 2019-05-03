@@ -6,10 +6,71 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>area_atuacao</ion-title>
+    <ion-title>Área de atuação</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <form> 
+    
+      <ion-item padding>
+        <ion-label>Atuação principal:</ion-label>
+        <ion-input type="text" placeholder="Ex: Informática, saúde."></ion-input> 
+      </ion-item>
+      <ion-item padding>
+        <ion-label>Curso:</ion-label>
+        <ion-input type="text" ></ion-input> 
+      </ion-item>
 
+      <br>
+      <div id="sec1">
+      <ion-item padding>
+        <ion-label>Atuação secundária:</ion-label>
+        <ion-input type="text"></ion-input> 
+      </ion-item> 
+      <ion-item padding>
+        <ion-label>Curso 2:</ion-label>
+        <ion-input type="text" ></ion-input> 
+      </ion-item>
+    </div>
+
+      <br>
+      <div id="sec2">
+      <ion-item padding>
+        <ion-label>Atuação terciária:</ion-label>
+        <ion-input type="text" ></ion-input> 
+      </ion-item>
+      <ion-item padding>
+        <ion-label>Curso 3:</ion-label>
+        <ion-input type="text" ></ion-input> 
+      </ion-item>
+    </div>
+
+      <button ion-button (click)="goToPage5()" style="width: 100px; float:right">Próximo</button>
+<<<<<<< HEAD
+      <button ion-button (click)="Cria()" style="width: 50px; float:left; margin-left: 15px">+</button>
+=======
+      <button ion-button (click)="cria()" style="width: 50px; float:left; margin-left: 15px">+</button>
+>>>>>>> 14a9d00ad21599b1a17b2a8154cfcc96078ebed9
+    </form> 
+  
+    
+  
+  <!--<div id="caixa_txt">   
+    <input type="text" id="area">
+    <button ion-button (click)="Caixa()" style="margin-left: 50px;">Adicionar</button> 
+  </div>
+   <script type="text/javascript">
+     function caixa() {
+     var textbox = document.createElement('input');
+     textbox.type = 'text'; 
+     //document.getElementById('area');
+     document.body.appendChild(textbox);
+     //var clone = document.getElementById('area').cloneNode(true);
+     //destino.appendChild (clone);
+     //var camposClonados = clone.getElementsByTagName('input');
+   }
+  </script>
+ -->
+ 
 </ion-content>
