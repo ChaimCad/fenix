@@ -13,6 +13,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HotsitePage } from '../pages/hotsite/hotsite';
 import { HotsitePageModule } from '../pages/hotsite/hotsite.module';
 import { CurriculoPageModule } from '../pages/curriculo/curriculo.module';
+import { IntroPageModule } from '../pages/intro/intro.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { InicioPageModule } from '../pages/inicio/inicio.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { CurriculoPageModule } from '../pages/curriculo/curriculo.module';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HotsitePageModule,
-    CurriculoPageModule
+    CurriculoPageModule,
+    IntroPageModule,
+    LoginPageModule,
+    InicioPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
