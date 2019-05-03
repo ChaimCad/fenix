@@ -6,10 +6,33 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Formação Acadêmica</ion-title>
+    <ion-title style="margin-right:30px">Formação Acadêmica</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+
+  <form [formGroup]="formulario">
+    <ion-item padding>
+      <ion-label>Escolaridade:</ion-label>
+      <ion-select cancelText="Cancelar" formControlName="escolaridade">
+        <ion-option *ngFor="let escola of escolaridade" [value]="escola">{{escola}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item padding>
+      <ion-label>Instituição de ensino:</ion-label>
+      <ion-input type="text" formControlName="nome_inst" ngModel pattern="[a-zA-Z ]* "></ion-input>
+    </ion-item>
+
+    <ion-item padding>
+      <ion-label>Data da Conclusão:</ion-label>
+      <ion-datetime (click)="RetornaAno()" displayFormat="MM/YYYY" pickerFormat="MM YYYY" cancelText="Cancelar"
+        doneText="OK" formControlName="ano"></ion-datetime>
+    </ion-item>
+
+    <button ion-button (click)="goToPage4()" style="width: 100px; float:right">Próximo</button>
+  </form>
 
 </ion-content>
