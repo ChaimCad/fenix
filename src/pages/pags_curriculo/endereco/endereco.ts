@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiCepProvider } from '../../../providers/api-cep/api-cep';
 import { Endereco } from '../endereco/endereco-model'
+
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
+import { FormacaoPage } from '../formacao/formacao';
+
+
 
 /**
  * Generated class for the EnderecoPage page.
@@ -53,9 +57,8 @@ export class EnderecoPage {
   }
 
   goToPage3(){
-    //console.log(this.formulario.controls.nome)
-    this.navCtrl.push(AreaAtuacaoPage);
-  }
 
+    this.navCtrl.push(FormacaoPage);
+  }
 
 }
