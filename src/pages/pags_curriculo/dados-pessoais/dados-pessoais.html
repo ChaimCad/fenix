@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Dados Pessoais</ion-title>
+    <ion-title style="margin-right:30px">Dados Pessoais</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,17 +14,19 @@
 
 <ion-list> 
 
-<form [formGroup]="formulario">
+<form [formGroup]="formulario" >
+  <!--(ngSubmit)="goToPage2()"-->
 
   <ion-item padding>
     <ion-label>Nome:</ion-label>
-    <ion-input type="text" [value]="nome" formControlName="nome"></ion-input>
+    <ion-input type="text" formControlName="nome" ngModel pattern="[a-zA-Z ]* "></ion-input>
+    
   </ion-item>
 
 
 <ion-item padding>
   <ion-label>Sobrenome:</ion-label>
-  <ion-input type="text" [value]="sobrenome"formControlName="sobrenome" ></ion-input>
+  <ion-input type="text" [value]="sobrenome" formControlName="sobrenome" ></ion-input>
 </ion-item>
 
 <ion-item padding>
@@ -52,7 +54,7 @@
 <ion-item padding>
     <ion-label>Estado civil:</ion-label>
       <ion-select cancelText="Cancelar" formControlName="estado_civil">
-        <ion-option *ngFor="let estado of estado_civil" [value]="estado_civil">{{estado}}</ion-option>
+        <ion-option *ngFor="let estado of estado_civil" [value]="estado">{{estado}}</ion-option>
       </ion-select>
 </ion-item>
 

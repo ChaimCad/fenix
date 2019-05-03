@@ -86,3 +86,11 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+$text-input-highlight-color-invalid: (
+   #f53d3d
+);
+
+$text-input-highlight-color-valid: (
+   #32db64
+);

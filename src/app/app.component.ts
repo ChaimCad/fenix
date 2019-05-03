@@ -17,7 +17,7 @@ import { EnderecoPage } from '../pages/pags_curriculo/endereco/endereco';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = EnderecoPage;
+  rootPage:any = Curriculo1Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormControl, FormGroup } from '@angular/forms';
-import { EnderecoPage } from '../endereco/endereco'
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { EnderecoPage } from '../endereco/endereco';
+import { DadosPessoaisModel } from '../dados-pessoais/dados-pessoais-model';
 
 /**
  * Generated class for the DadosPessoaisPage page.
@@ -17,7 +18,11 @@ import { EnderecoPage } from '../endereco/endereco'
 })
 export class DadosPessoaisPage {
 
-  public data:any; mes:any; ano:number; min_idade:string; max_idade:string
+  public data:any; mes:any; ano:number; min_idade:string; max_idade:string;
+
+  public nome:string; public sobrenome:string; public sexo1:string; 
+        public email:string; public telefone:string; public celular:string;
+        public estado_civil1:string; public filhos1:string; public data_nasc:string
 
   public RetornaDataAtual(){
     var dNow = new Date();
@@ -47,16 +52,18 @@ export class DadosPessoaisPage {
     //console.log(this.ano)
 
     
-     this.min_idade = ((this.ano-18) + '-' + this.mes + '-' + this.data).toString();
+    this.min_idade = ((this.ano-18) + '-' + this.mes + '-' + this.data).toString();
    
     this.max_idade = ((this.ano-90) + '-' + this.mes + '-' + this.data).toString();
    
     
   }
 
+
+
   public formulario:FormGroup = new FormGroup({
-    'nome' : new FormControl(null),
-    'sobrenome': new FormControl(null),
+    'nome' : new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(20)]),
+    'sobrenome': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50)]),
     'sexo': new FormControl(null),
     'email': new FormControl(null),
     'telefone': new FormControl(null),
@@ -66,6 +73,7 @@ export class DadosPessoaisPage {
     'data_nasc': new FormControl(null)
   })
 
+  
   public estado_civil: Array<string> = [
     'Solteiro(a)',
     'Casado(a)',
@@ -80,18 +88,29 @@ export class DadosPessoaisPage {
     'Outro'
   ]
 
+  /*public Valida(event:any){
+    this.nome = (<HTMLInputElement>event.target).value;
+    if (this.nome.length < 3 ){
+
+    }
+    if (this.nome. == "   ")
+
+  }*/
+
   goToPage2(){
+    console.log(this.formulario.controls.nome)
     this.navCtrl.push(EnderecoPage);
   }
 
-  public filho:Array<string> = ['0','1','2','3','4+']
+  public filho:Array<string> = ['0','1','2','3','4+'];
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DadosPessoaisPage');
-    //this.RetornaDataAtual()
+    this.RetornaDataAtual()
+    //this.formulario;
   }
 
 }
