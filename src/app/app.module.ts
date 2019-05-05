@@ -16,6 +16,7 @@ import { CurriculoPageModule } from '../pages/curriculo/curriculo.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { InicioPageModule } from '../pages/inicio/inicio.module';
+import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { InicioPageModule } from '../pages/inicio/inicio.module';
     CurriculoPageModule,
     IntroPageModule,
     LoginPageModule,
-    InicioPageModule
+    InicioPageModule,
+    CadastroPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
