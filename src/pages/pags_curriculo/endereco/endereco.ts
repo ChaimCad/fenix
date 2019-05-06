@@ -135,8 +135,6 @@ export class EnderecoPage {
     
   }
 
-  goToPage5(){
-    this.navCtrl.push(QualificacoesPage);
-  }
+  
 
 }

@@ -5,6 +5,7 @@ import { directive } from '@angular/core/src/render3/instructions';
 import { AlertController } from 'ionic-angular';
 
 import { QualificacoesPage } from '../qualificacoes/qualificacoes';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 /**
  * Generated class for the AreaAtuacaoPage page.
@@ -29,9 +30,29 @@ export class AreaAtuacaoPage {
     console.log('ionViewDidLoad AreaAtuacaoPage');
   }
 
+  public formulario_atuacao:FormGroup = new FormGroup({
+    'area1' : new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'area2': new FormControl(null, [Validators.minLength(2), Validators.maxLength(50)]),
+    'area3': new FormControl(null),
+    'curso1': new FormControl(null),
+    'curso2': new FormControl(null, [Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'curso3': new FormControl(null, [ Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')])
+  
+  })
 
   goToPage5(){
-    this.navCtrl.push(QualificacoesPage);
+    if (this.formulario_atuacao.invalid != true){
+      this.navCtrl.push(QualificacoesPage);
+    }
+    else
+    {
+      let alert = this.alertCtrl.create({
+        title: 'Atenção!',
+        subTitle: 'Preencha todos os campos corretamente.',
+        buttons: ['Ok']
+      });
+      alert.present();
+    }
   }
 
 

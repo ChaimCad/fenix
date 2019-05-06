@@ -11,26 +11,26 @@
 </ion-header>
 
 <ion-content padding>
-  <form> 
+  <form [formGroup]="formulario_atuacao"> 
     
       <ion-item padding>
         <ion-label>Atuação principal:</ion-label>
-        <ion-input type="text" placeholder="Ex: Informática, saúde."></ion-input> 
+        <ion-input type="text" placeholder="Ex: Informática, saúde." formControlName="area1"></ion-input> 
       </ion-item>
       <ion-item padding>
         <ion-label>Curso:</ion-label>
-        <ion-input type="text" ></ion-input> 
+        <ion-input type="text" formControlName="curso1"></ion-input> 
       </ion-item>
 
       <br>
       <div id="sec1">
       <ion-item padding>
         <ion-label>Atuação secundária:</ion-label>
-        <ion-input type="text"></ion-input> 
+        <ion-input type="text" formControlName="area2"></ion-input> 
       </ion-item> 
       <ion-item padding>
         <ion-label>Curso 2:</ion-label>
-        <ion-input type="text" ></ion-input> 
+        <ion-input type="text" formControlName="curso2"></ion-input> 
       </ion-item>
     </div>
 
@@ -38,11 +38,11 @@
       <div id="sec2">
       <ion-item padding>
         <ion-label>Atuação terciária:</ion-label>
-        <ion-input type="text" ></ion-input> 
+        <ion-input type="text" formControlName="area3"></ion-input> 
       </ion-item>
       <ion-item padding>
         <ion-label>Curso 3:</ion-label>
-        <ion-input type="text" ></ion-input> 
+        <ion-input type="text" formControlName="curso3"></ion-input> 
       </ion-item>
     </div>
 
