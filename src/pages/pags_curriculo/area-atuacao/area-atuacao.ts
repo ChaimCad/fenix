@@ -32,11 +32,11 @@ export class AreaAtuacaoPage {
 
   public formulario_atuacao:FormGroup = new FormGroup({
     'area1' : new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
-    'area2': new FormControl(null, [Validators.minLength(2), Validators.maxLength(50)]),
-    'area3': new FormControl(null),
-    'curso1': new FormControl(null),
-    'curso2': new FormControl(null, [Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
-    'curso3': new FormControl(null, [ Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')])
+    'area2': new FormControl(null, [Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'area3': new FormControl(null, [Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'curso1': new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'curso2': new FormControl(null, [Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'curso3': new FormControl(null, [ Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')])
   
   })
 
@@ -76,6 +76,14 @@ export class AreaAtuacaoPage {
     
   }
     
+  }
+
+  valida(name: string)
+  {
+    if (this.formulario_atuacao.controls.valid)
+    document.getElementById('lbl_'+ name).style.color='#32db64';
+  else if (!this.formulario_atuacao.controls.valid || this.formulario_atuacao.controls.touched)
+    document.getElementById('lbl_'+ name).style.color='#f53d3d';
   }
 
   
