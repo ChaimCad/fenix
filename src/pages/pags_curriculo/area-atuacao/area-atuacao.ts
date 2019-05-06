@@ -31,6 +31,8 @@ export class AreaAtuacaoPage {
 
 
   goToPage5(){
+    this.navCtrl.push(QualificacoesPage);
+  }
 
 
   cria(){
@@ -55,9 +57,6 @@ export class AreaAtuacaoPage {
     
   }
 
-  this.goToPage5(){
-    
-    this.navCtrl.push(QualificacoesPage);
-  }
+  
 
 }

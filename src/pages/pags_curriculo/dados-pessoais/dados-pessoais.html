@@ -14,12 +14,12 @@
 
 <ion-list> 
 
-<form [formGroup]="formulario" >
+<form [formGroup]="formulario_dadospessoais" >
   <!--(ngSubmit)="goToPage2()"-->
 
   <ion-item padding>
     <ion-label id="lbl_nome">Nome:</ion-label>
-    <ion-input type="text" formControlName="nome" (ionFocus)="Valida_nome()" (keyup)="Valida_nome()"></ion-input>
+    <ion-input type="text" #nome formControlName="nome" (keyup)="Valida('nome')" (ionFocus)="Valida('nome')" ></ion-input>
   </ion-item>
   <!--<small *ngIf="formulario.get('nome').valid && formulario.get('nome').touched" >OK!</small>
   <small *ngIf="!formulario.get('nome').valid && formulario.get('nome').touched">Erro!</small>-->
@@ -28,53 +28,54 @@
 
 <ion-item padding>
   <ion-label id="lbl_sobrenome">Sobrenome:</ion-label>
-  <ion-input type="text" formControlName="sobrenome" (keyup)="Valida_sobrenome()" (ionFocus)="Valida_sobrenome()" ></ion-input>
+  <ion-input type="text" formControlName="sobrenome" (keyup)="Valida('sobrenome')" (ionFocus)="Valida('sobrenome')" ></ion-input>
 </ion-item>
 
 <ion-item padding>
     <ion-label id="lbl_sexo">Sexo:</ion-label>
-      <ion-select cancelText="Cancelar"  (ionFocus)="Valida_sexo()" (ionBlur)="Valida_sexo()" formControlName="sexo">
+      <ion-select cancelText="Cancelar"  (ionFocus)="Valida('sexo')" (ionBlur)="Valida('sexo')" formControlName="sexo">
         <ion-option *ngFor="let sexos of sexo" >{{sexos}}</ion-option>
       </ion-select>
 </ion-item>
 
 <ion-item padding>
-    <ion-label>Email:</ion-label>
-    <ion-input type="email" formControlName="email"></ion-input>
+    <ion-label id="lbl_email">Email:</ion-label>
+    <ion-input type="email" formControlName="email" (keyup)="Valida('email')" (ionFocus)="Valida('email')"></ion-input>
 </ion-item>
 
 <ion-item padding>
-    <ion-label>Telefone:</ion-label>
-    <ion-input type="text" ngModel pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" formControlName="telefone"></ion-input>
+    <ion-label id="lbl_telefone">Telefone:</ion-label>
+    <ion-input type="text" formControlName="telefone" (keyup)="Valida('telefone')" (ionFocus)="Valida('telefone')"></ion-input>
 </ion-item>
 
 <ion-item padding>
-    <ion-label>Celular:</ion-label>
-    <ion-input type="text" [value]="celular" formControlName="celular"></ion-input>
+    <ion-label id="lbl_celular">Celular:</ion-label>
+    <ion-input type="text" [value]="celular" formControlName="celular" (keyup)="Valida('celular')" (ionFocus)="Valida('celular')"></ion-input>
 </ion-item>
 
 <ion-item padding>
-    <ion-label>Estado civil:</ion-label>
-      <ion-select cancelText="Cancelar" formControlName="estado_civil">
-        <ion-option *ngFor="let estado of estado_civil" [value]="estado">{{estado}}</ion-option>
+    <ion-label id="lbl_estado_civil">Estado civil:</ion-label>
+      <ion-select cancelText="Cancelar" formControlName="estado_civil" (ionFocus)="Valida('estado_civil')" (ionBlur)="Valida('estado_civil')">
+        <ion-option *ngFor="let estado of estado_civil" >{{estado}}</ion-option>
       </ion-select>
 </ion-item>
 
 <ion-item padding>
-    <ion-label>Filhos:</ion-label>
-      <ion-select cancelText="Cancelar" formControlName="filhos">
-        <ion-option *ngFor="let filhos of filho" [value]="filhos" >{{filhos}}</ion-option>
+    <ion-label id="lbl_filhos">Filhos:</ion-label>
+      <ion-select cancelText="Cancelar" formControlName="filhos" (ionFocus)="Valida('filhos')" (ionBlur)="Valida('filhos')">
+        <ion-option *ngFor="let filhos of filho" >{{filhos}}</ion-option>
       </ion-select>
 </ion-item>
 
 <ion-item padding>
-  <ion-label>Data de nascimento:</ion-label>
-  <ion-datetime (click)="RetornaDataAtual()"displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [min]="max_idade" [max]="min_idade" cancelText="Cancelar" doneText="OK" formControlName="data_nasc"></ion-datetime>
+  <ion-label id="lbl_data_nasc">Data de nascimento:</ion-label>
+  <ion-datetime (click)="RetornaDataAtual()"displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [min]="max_idade" [max]="min_idade" cancelText="Cancelar" doneText="OK" formControlName="data_nasc" (ionFocus)="Valida('data_nasc')" (ionBlur)="Valida('data_nasc')"></ion-datetime>
 </ion-item>
 
 
 
-  <button ion-button (click)="goToPage2()" style="width: 100px; float:right">Próximo</button>
+  <button ion-button (click)="goToPage2()" style="width: 100px; float:right; background-color: #FF7F50
+  ">Próximo</button>
 
 
 </form>

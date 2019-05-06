@@ -12,46 +12,52 @@
 
 <ion-content padding>
 
-<form>
+<form [formGroup]="formulario_endereco">
 
 <ion-item padding>
-  <ion-label >Insira o CEP:</ion-label>
-  <ion-input type="text" (keyup)="pegarCEP($event)"></ion-input>
+  <ion-label id="lbl_cep">Insira o CEP:</ion-label>
+  <ion-input type="text" (keyup)="pegarCEP($event)" formControlName="cep" (ionFocus)="Valida('cep')"></ion-input>
 </ion-item>
 
 <ion-item padding>
-  <ion-label>Endereço:</ion-label>
-  <ion-input type="text" [value]="lista_cep.logradouro"></ion-input>
+  <ion-label id="lbl_endereco">Endereço:</ion-label>
+  <ion-input type="text" [value]="lista_cep.logradouro" formControlName="endereco" (keyup)="Valida('endereco')" (ionFocus)="Valida('endereco')" (ionChange)="Valida('endereco')"></ion-input>
 </ion-item>
 
 <ion-item padding>
 
-  <ion-label>Número:</ion-label>
-  <ion-input type="text" size="5"></ion-input>
+  <ion-label id="lbl_numero">Número:</ion-label>
+  <ion-input type="text" size="5" formControlName="numero" (keyup)="Valida('numero')" (ionFocus)="Valida('numero')" ></ion-input>
 </ion-item>
 
 <ion-item padding>
-  <ion-label>Complemento:</ion-label>
-  <ion-input type="text" [value]="lista_cep.complemento"></ion-input>
+  <ion-label id="lbl_complemento">Complemento:</ion-label>
+  <ion-input type="text" [value]="lista_cep.complemento" formControlName="complemento" (keyup)="Valida('complemento')" (ionChange)="Valida('complemento')" (ionFocus)="Valida('complemento')"></ion-input>
 </ion-item>
 
 <ion-item padding>
-  <ion-label>Bairro:</ion-label>
-  <ion-input type="text" [value]="lista_cep.bairro"></ion-input>
+  <ion-label id="lbl_bairro">Bairro:</ion-label>
+  <ion-input type="text" [value]="lista_cep.bairro" formControlName="bairro" (keyup)="Valida('bairro')" (ionChange)="Valida('bairro')" (ionFocus)="Valida('bairro')"></ion-input>
+</ion-item>
+
+<ion-item padding>
+  <ion-label id="lbl_pais">País:</ion-label>
+  <ion-input type="text" formControlName="pais" (keyup)="Valida('pais')" (ionFocus)="Valida('pais')"></ion-input>
 </ion-item>
 
 <ion-item padding >
-  <ion-label>Cidade:</ion-label>
-  <ion-input type="text" [value]="lista_cep.localidade"></ion-input>
+  <ion-label id="lbl_cidade">Cidade:</ion-label>
+  <ion-input type="text" [value]="lista_cep.localidade" (ionChange)="Valida('cidade')" formControlName="cidade" (keyup)="Valida('cidade')" (ionFocus)="Valida('cidade')"></ion-input>
 
 </ion-item>
 
 <ion-item padding>
-  <ion-label>UF:</ion-label>
-  <ion-input type="text" size="2" [value]="lista_cep.uf"></ion-input>
+  <ion-label id="lbl_uf">UF:</ion-label>
+  <ion-input type="text" size="2" [value]="lista_cep.uf" formControlName="uf" (ionChange)="Valida('uf')" (keyup)="Valida('uf')" (ionFocus)="Valida('uf')"></ion-input>
 </ion-item>
 
-<button ion-button (click)="goToPage3()" style="width: 100px; float:right">Próximo</button>
+<button ion-button (click)="goToPage3()" style="width: 100px; float:right; background-color: #FF7F50
+">Próximo</button>
 
 
 </form>

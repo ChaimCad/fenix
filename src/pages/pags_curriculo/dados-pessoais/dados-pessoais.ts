@@ -20,10 +20,6 @@ export class DadosPessoaisPage {
 
   public data:any; mes:any; ano:number; min_idade:string; max_idade:string;
 
-  //public nome:string; public sobrenome:string; public sexo1:string; 
-      //  public email:string; public telefone:string; public celular:string;
-       // public estado_civil1:string; public filhos1:string; public data_nasc:string
-
   public RetornaDataAtual(){
     var dNow = new Date();
     
@@ -59,44 +55,76 @@ export class DadosPessoaisPage {
     
   }
 
-  public valida_nome:boolean = false;
-
-
-
-  public formulario:FormGroup = new FormGroup({
+  public formulario_dadospessoais:FormGroup = new FormGroup({
     'nome' : new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
-    'sobrenome': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50)]),
+    'sobrenome': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[A-Za-zÀ-ú]*')]),
     'sexo': new FormControl(null, [Validators.required]),
     'email': new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]),
-    'telefone': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20), Validators.pattern("\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$")]),
-    'celular': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50)]),
+    'telefone': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20), Validators.pattern('[0-9]+')]),
+    'celular': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[0-9]+')]),
     'estado_civil': new FormControl(null, [Validators.required]),
     'filhos': new FormControl(null, [Validators.required]),
     'data_nasc': new FormControl(null, [Validators.required])
   })
 
-  public Valida_nome(){
-    //this.formulario.value.nome = (<HTMLInputElement>event.target).value
-    if (this.formulario.controls.nome.valid)
-      document.getElementById('lbl_nome').style.color='#32db64';
-    else if (!this.formulario.controls.nome.valid || this.formulario.controls.nome.touched)
-    document.getElementById('lbl_nome').style.color='#f53d3d';
-  }
-  public Valida_sobrenome(){
-    if (this.formulario.controls.sobrenome.valid)
-      document.getElementById('lbl_sobrenome').style.color='#32db64';
-    else if (!this.formulario.controls.sobrenome.valid || this.formulario.controls.sobrenome.touched)
-    document.getElementById('lbl_sobrenome').style.color='#f53d3d';
-  }
-  public Valida_sexo(){
-    if (this.formulario.controls.sexo.valid)
-      document.getElementById('lbl_sexo').style.color='#32db64';
-    else if (!this.formulario.controls.sexo.valid || this.formulario.controls.sexo.touched)
-    document.getElementById('lbl_sexo').style.color='#f53d3d';
+  public Valida(name:string){
+    if (name == 'nome'){
+      if (this.formulario_dadospessoais.controls.nome.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.nome.valid || this.formulario_dadospessoais.controls.nome.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'sobrenome'){
+      if (this.formulario_dadospessoais.controls.sobrenome.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.sobrenome.valid || this.formulario_dadospessoais.controls.sobrenome.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'sexo'){
+      if (this.formulario_dadospessoais.controls.sexo.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.sexo.valid || this.formulario_dadospessoais.controls.sexo.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'email'){
+      if (this.formulario_dadospessoais.controls.email.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.email.valid || this.formulario_dadospessoais.controls.email.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'telefone'){
+      if (this.formulario_dadospessoais.controls.telefone.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.telefone.valid || this.formulario_dadospessoais.controls.telefone.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'celular'){
+      if (this.formulario_dadospessoais.controls.celular.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.celular.valid || this.formulario_dadospessoais.controls.celular.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'estado_civil'){
+      if (this.formulario_dadospessoais.controls.estado_civil.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.estado_civil.valid || this.formulario_dadospessoais.controls.estado_civil.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'filhos'){
+      if (this.formulario_dadospessoais.controls.filhos.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.filhos.valid || this.formulario_dadospessoais.controls.filhos.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'data_nasc'){
+      if (this.formulario_dadospessoais.controls.data_nasc.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_dadospessoais.controls.data_nasc.valid || this.formulario_dadospessoais.controls.data_nasc.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    
   }
 
-
-  
   public estado_civil: Array<string> = [
     'Solteiro(a)',
     'Casado(a)',
@@ -111,21 +139,11 @@ export class DadosPessoaisPage {
     'Outro'
   ]
 
-  /*public Valida(event:any){
-    this.nome = (<HTMLInputElement>event.target).value;
-    if (this.nome.length < 3 ){
+  public filho:Array<string> = ['0','1','2','3','4+'];
 
-    }
-    if (this.nome. == "   ")
-
-  }*/
 
   goToPage2(){
-    if (this.formulario.controls.nome.valid && this.formulario.controls.sobrenome.valid
-      && this.formulario.controls.sexo.valid && this.formulario.controls.email.valid
-      && this.formulario.controls.telefone.valid && this.formulario.controls.celular.valid 
-      && this.formulario.controls.estado_civil.valid && this.formulario.controls.filhos.valid 
-      && this.formulario.controls.data_nasc.valid){
+    if (this.formulario_dadospessoais.status != "INVALID"){
 
       this.navCtrl.push(EnderecoPage);
     }
@@ -133,16 +151,15 @@ export class DadosPessoaisPage {
     {
       let alert = this.alertCtrl.create({
         title: 'Atenção!',
-        subTitle: 'Preencha todos os campos corretamente',
+        subTitle: 'Preencha todos os campos corretamente. Todos os campos são obrigatórios!',
         buttons: ['Ok']
       });
       alert.present();
     }
-    console.log(this.formulario.controls.sexo)
+    
     
   }
 
-  public filho:Array<string> = ['0','1','2','3','4+'];
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl:AlertController) {
   }
@@ -150,8 +167,6 @@ export class DadosPessoaisPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DadosPessoaisPage');
     this.RetornaDataAtual()
-    //this.Valida()
-    //this.formulario;
   }
 
 }
