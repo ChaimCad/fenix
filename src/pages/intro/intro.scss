@@ -1,15 +1,31 @@
 .loading-md .spinner-crescent circle {
     stroke: orangered;
 }
+
+.refresher-refreshing .spinner-crescent circle {
+    stroke: orangered;
+  }
+
+  .loading-wp .spinner-crescent circle {
+    stroke: orangered;
+  }
+
+  .loading-ios .spinner-crescent circle {
+    stroke: orangered;
+  }
+
+  .infinite-loading-spinner .spinner-crescent circle {
+    stroke: orangered;
+  }
   
 page-intro {
-
     .container{
         width: 90vw;
         height: 80vh;
         background: #ffffff;
         display: flex;
         flex-direction: row;
+        margin: 0 auto 0 auto;
         justify-content: center;
         align-items: center;
         text-align: center;
