@@ -50,7 +50,33 @@ export class QualificacoesPage {
     'Outros'
   ]
 
-
+  public Validaçoes(name:string)
+  {
+    if (name == 'curso'){
+      if (this.formulario.controls.curso.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario.controls.curso.valid || this.formulario.controls.curso.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'nome_inst'){
+      if (this.formulario.controls.nome_inst.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario.controls.nome_inst.valid || this.formulario.controls.nome_inst.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'tipo_curs'){
+      if (this.formulario.controls.tipo_curs.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario.controls.tipo_curs.valid || this.formulario.controls.tipo_curs.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+    if (name == 'desc'){
+      if (this.formulario.controls.desc.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario.controls.desc.valid || this.formulario.controls.desc.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+  }
 
 
   ionViewDidLoad() {
