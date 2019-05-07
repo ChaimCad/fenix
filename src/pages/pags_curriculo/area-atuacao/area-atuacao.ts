@@ -23,6 +23,11 @@ export class AreaAtuacaoPage {
 
   public cont = 0;
 
+  public area22:string = '';
+  public curso22: string = '';
+  public area33:string = '';
+  public curso33: string = '';
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
@@ -37,7 +42,6 @@ export class AreaAtuacaoPage {
     'curso1': new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
     'curso2': new FormControl(null, [Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
     'curso3': new FormControl(null, [ Validators.minLength(2), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')])
-  
   })
 
   valida(name: string)
@@ -135,12 +139,24 @@ export class AreaAtuacaoPage {
 
   apaga(){
     this.cont--;
-    if (this.cont==1)
+    if (this.cont==1){
       document.getElementById('sec2').style.display='none';
+      this.curso33 = this.formulario_atuacao.value.curso3;
+      this.curso33 = null;
+
+      this.area33 = this.formulario_atuacao.value.area3;
+      this.area33 = null;
+    
+    }
     if (this.cont==0)
     {
       document.getElementById('sec1').style.display='none';
       document.getElementById('btn_menos').style.display='none';
+      this.curso22 = this.formulario_atuacao.value.curso2;
+      this.curso22 = null;
+
+      this.area22 = this.formulario_atuacao.value.area2;
+      this.area22 = null;
     }
   }
 
