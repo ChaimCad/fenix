@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
+import { QualificacoesPage } from '../qualificacoes/qualificacoes';
 
 /**
  * Generated class for the FormacaoPage page.
@@ -18,6 +19,7 @@ import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
 export class FormacaoPage {
   ano: number;
   mes: number;
+  alertCtrl: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -34,9 +36,9 @@ export class FormacaoPage {
 
 
   public formulario:FormGroup = new FormGroup({
-    'escolaridade': new FormControl(null),
-    'nome_inst': new FormControl(null),
-    'ano': new FormControl(null)
+    'escolaridade': new FormControl(null, [Validators.required]),
+    'nome_inst': new FormControl(null,[Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'ano': new FormControl(null, [Validators.required])
   })
 
 
@@ -54,8 +56,18 @@ export class FormacaoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FormacaoPage');
   }
+  
   goToPage4(){
-    
-    this.navCtrl.push(AreaAtuacaoPage);
-  }
-}
+    if (this.formulario.invalid != true){
+      this.navCtrl.push(QualificacoesPage);
+    }
+    else
+    {
+      let alert = this.alertCtrl.create({
+        title: 'Atenção!',
+        subTitle: 'Preencha todos os campos corretamente.',
+        buttons: ['Ok']
+      });
+      alert.present();
+    }
+  }}

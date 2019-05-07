@@ -22,24 +22,23 @@ export class QualificacoesPage {
 
   ano: number;
   mes: number;
-  
-  public RetornaAno(){
+
+  public RetornaAno() {
     var dNow = new Date();
-    
-  
-      this.mes = dNow.getMonth()
-      //return mes
-    
+
+    this.mes = dNow.getMonth()
+    //return mes
+
     this.ano = dNow.getFullYear()
     //console.log(this.ano) 
   }
 
-  public formulario:FormGroup = new FormGroup({
+  public formulario: FormGroup = new FormGroup({
     'curso': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
     'nome_inst': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern('[A-Za-zÀ-ú]*')]),
-    'ano': new FormControl(null,  [Validators.required]),
-    'tipo_curs':new FormControl(null,  [Validators.required, Validators.minLength(4), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
-    'desc':new FormControl(null,  [Validators.required,  Validators.maxLength(10i0), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'ano': new FormControl(null, [Validators.required]),
+    'tipo_curs': new FormControl(null, [Validators.required]),
+    'desc': new FormControl(null, [Validators.required, Validators.maxLength(10), Validators.pattern('[A-Za-zÀ-ú]*')]),
   })
 
   public tipo_curs: Array<string> = [
@@ -51,42 +50,40 @@ export class QualificacoesPage {
     'Outros'
   ]
 
-  public Validaçoes(name:string)
-  {
-    if (name == 'curso'){
+  public Validaçoes(name: string) {
+    if (name == 'curso') {
       if (this.formulario.controls.curso.valid)
-        document.getElementById('lbl_'+ name).style.color='#32db64';
+        document.getElementById('lbl_' + name).style.color = '#32db64';
       else if (!this.formulario.controls.curso.valid || this.formulario.controls.curso.touched)
-        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
-    if (name == 'nome_inst'){
+    if (name == 'nome_inst') {
       if (this.formulario.controls.nome_inst.valid)
-        document.getElementById('lbl_'+ name).style.color='#32db64';
+        document.getElementById('lbl_' + name).style.color = '#32db64';
       else if (!this.formulario.controls.nome_inst.valid || this.formulario.controls.nome_inst.touched)
-        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
-    if (name == 'tipo_curs'){
+    if (name == 'tipo_curs') {
       if (this.formulario.controls.tipo_curs.valid)
-        document.getElementById('lbl_'+ name).style.color='#32db64';
+        document.getElementById('lbl_' + name).style.color = '#32db64';
       else if (!this.formulario.controls.tipo_curs.valid || this.formulario.controls.tipo_curs.touched)
-        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
-    if (name == 'desc'){
+    if (name == 'desc') {
       if (this.formulario.controls.desc.valid)
-        document.getElementById('lbl_'+ name).style.color='#32db64';
+        document.getElementById('lbl_' + name).style.color = '#32db64';
       else if (!this.formulario.controls.desc.valid || this.formulario.controls.desc.touched)
-        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
   }
 
 
-  goToPage2(){
-    if (this.formulario.status != "INVALID"){
+  goToPage5() {
+    if (this.formulario.status != "INVALID") {
 
       this.navCtrl.push(QualificacoesPage);
     }
-    else
-    {
+    else {
       let alert = this.alertCtrl.create({
         title: 'Atenção!',
         subTitle: 'Preencha todos os campos corretamente. Todos os campos são obrigatórios!',
@@ -94,8 +91,8 @@ export class QualificacoesPage {
       });
       alert.present();
     }
-    
-    
+
+
   }
 
 
