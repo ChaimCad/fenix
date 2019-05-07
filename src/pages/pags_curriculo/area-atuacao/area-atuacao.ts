@@ -22,11 +22,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AreaAtuacaoPage {
 
   public cont = 0;
+  public invalido = true;
 
   public area22:string = '';
   public curso22: string = '';
   public area33:string = '';
   public curso33: string = '';
+
+  public cont2 = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
@@ -95,11 +98,21 @@ export class AreaAtuacaoPage {
     }
   }
 
-
   goToPage5(){
-    if (this.formulario_atuacao.invalid != true){
+
+    if (this.formulario_atuacao.invalid != true && this.invalido != true){
+      let alert = this.alertCtrl.create({
+        title: 'Atenção!',
+        subTitle: 'Preencha todos os campos corretamente.',
+        buttons: ['Ok']
+      });
+      alert.present();
+    }
+
+    else if (this.formulario_atuacao.invalid != true || this.invalido != true){
       this.navCtrl.push(QualificacoesPage);
     }
+   
     else
     {
       let alert = this.alertCtrl.create({
@@ -110,9 +123,6 @@ export class AreaAtuacaoPage {
       alert.present();
     }
   }
-
-  
-
 
   cria(){
    this.cont++;
@@ -160,6 +170,13 @@ export class AreaAtuacaoPage {
     }
   }
 
+ nao_possuo(){
+   this.cont++;
+   if((this.cont % 2)==0)
+      this.invalido = true;
+   else
+     this.invalido = false;
+ }
   
 
 }
