@@ -23,8 +23,9 @@ import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = FormacaoPage;
+  rootPage:any = AreaAtuacaoPage;
 
+ 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
