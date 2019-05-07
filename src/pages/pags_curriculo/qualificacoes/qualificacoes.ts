@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 /**
  * Generated class for the QualificacoesPage page.
@@ -15,6 +15,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: 'qualificacoes.html',
 })
 export class QualificacoesPage {
+  alertCtrl: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -34,11 +35,11 @@ export class QualificacoesPage {
   }
 
   public formulario:FormGroup = new FormGroup({
-    'curso': new FormControl(null),
-    'nome_inst': new FormControl(null),
-    'ano': new FormControl(null),
-    'tipo_curs':new FormControl(null),
-    'desc':new FormControl(null)
+    'curso': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'nome_inst': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'ano': new FormControl(null,  [Validators.required]),
+    'tipo_curs':new FormControl(null,  [Validators.required, Validators.minLength(4), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'desc':new FormControl(null,  [Validators.required,  Validators.maxLength(10i0), Validators.pattern('[A-Za-zÀ-ú]*')]),
   })
 
   public tipo_curs: Array<string> = [
@@ -76,6 +77,25 @@ export class QualificacoesPage {
       else if (!this.formulario.controls.desc.valid || this.formulario.controls.desc.touched)
         document.getElementById('lbl_'+ name).style.color='#f53d3d';
     }
+  }
+
+
+  goToPage2(){
+    if (this.formulario.status != "INVALID"){
+
+      this.navCtrl.push(QualificacoesPage);
+    }
+    else
+    {
+      let alert = this.alertCtrl.create({
+        title: 'Atenção!',
+        subTitle: 'Preencha todos os campos corretamente. Todos os campos são obrigatórios!',
+        buttons: ['Ok']
+      });
+      alert.present();
+    }
+    
+    
   }
 
 
