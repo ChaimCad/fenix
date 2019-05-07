@@ -50,7 +50,7 @@ export class QualificacoesPage {
     'Outros'
   ]
 
-  public Validaçoes(name: string) {
+  public Validacoes(name: string) {
     if (name == 'curso') {
       if (this.formulario.controls.curso.valid)
         document.getElementById('lbl_' + name).style.color = '#32db64';
@@ -67,6 +67,12 @@ export class QualificacoesPage {
       if (this.formulario.controls.tipo_curs.valid)
         document.getElementById('lbl_' + name).style.color = '#32db64';
       else if (!this.formulario.controls.tipo_curs.valid || this.formulario.controls.tipo_curs.touched)
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
+    }
+    if (name == 'ano') {
+      if (this.formulario.controls.ano.valid)
+        document.getElementById('lbl_' + name).style.color = '#32db64';
+      else if (!this.formulario.controls.ano.valid || this.formulario.controls.ano.touched)
         document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
     if (name == 'desc') {

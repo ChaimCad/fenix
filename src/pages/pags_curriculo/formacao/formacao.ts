@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
 import { QualificacoesPage } from '../qualificacoes/qualificacoes';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the FormacaoPage page.
@@ -19,25 +20,28 @@ import { QualificacoesPage } from '../qualificacoes/qualificacoes';
 export class FormacaoPage {
   ano: number;
   mes: number;
-  alertCtrl: any;
+  data: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
-  public RetornaAno(){
+  public RetornaAno() {
     var dNow = new Date();
-    
-  
-      this.mes = dNow.getMonth()
-      //return mes
-    
+
+
+    this.mes = dNow.getMonth()
+    //return mes
+
     this.ano = dNow.getFullYear()
     //console.log(this.ano) 
+
+ 
+
   }
 
 
-  public formulario:FormGroup = new FormGroup({
+  public formulario: FormGroup = new FormGroup({
     'escolaridade': new FormControl(null, [Validators.required]),
-    'nome_inst': new FormControl(null,[Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'nome_inst': new FormControl(null, [Validators.required, Validators.pattern('[A-Za-zÀ-ú]*')]),
     'ano': new FormControl(null, [Validators.required])
   })
 
@@ -52,17 +56,38 @@ export class FormacaoPage {
     'Ensino Superior'
   ]
 
- 
+  public Validacoes(name: string) {
+    if (name == 'escolaridade') {
+      if (this.formulario.controls.escolaridade.valid)
+        document.getElementById('lbl_' + name).style.color = '#32db64';
+      else if (!this.formulario.controls.escolaridade.valid || this.formulario.controls.escolaridade.touched)
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
+    }
+    if (name == 'nome_inst') {
+      if (this.formulario.controls.nome_inst.valid)
+        document.getElementById('lbl_' + name).style.color = '#32db64';
+      else if (!this.formulario.controls.nome_inst.valid || this.formulario.controls.nome_inst.touched)
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
+    }
+    if (name == 'ano') {
+      if (this.formulario.controls.ano.valid)
+        document.getElementById('lbl_' + name).style.color = '#32db64';
+      else if (!this.formulario.controls.ano.valid || this.formulario.controls.ano.touched)
+        document.getElementById('lbl_' + name).style.color = '#f53d3d';
+    }
+  }
+
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad FormacaoPage');
   }
-  
-  goToPage4(){
-    if (this.formulario.invalid != true){
+
+  goToPage4() {
+    if (this.formulario.status != "INVALID"){
       this.navCtrl.push(QualificacoesPage);
     }
-    else
-    {
+    else {
       let alert = this.alertCtrl.create({
         title: 'Atenção!',
         subTitle: 'Preencha todos os campos corretamente.',
@@ -70,4 +95,5 @@ export class FormacaoPage {
       });
       alert.present();
     }
-  }}
+  }
+}

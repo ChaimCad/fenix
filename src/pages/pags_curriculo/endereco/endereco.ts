@@ -4,7 +4,7 @@ import { ApiCepProvider } from '../../../providers/api-cep/api-cep';
 import { Endereco } from '../endereco/endereco-model'
 
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
-import { FormacaoPage } from '../formacao/formacao';
+import FormacaoPage from '../formacao/formacao';
 import { QualificacoesPage } from '../qualificacoes/qualificacoes';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
