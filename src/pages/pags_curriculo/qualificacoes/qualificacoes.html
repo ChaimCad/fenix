@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Qualificações</ion-title>
+    <ion-title>Qualificação Profissional</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -21,22 +21,22 @@
     </ion-item>
 
     <ion-item padding>
-      <ion-label id="lbl_nome_inst">Instituição:</ion-label>
-      <ion-input type="text" formControlName="nome_inst" (keyup)="Validacoes('nome_inst')" (ionFocus)="Validacoes('nome_inst')"(ionBlur)="Validacoes('nome_inst')"></ion-input>
+      <ion-label id="lbl_nome_inst">Instituição de ensino:</ion-label>
+      <ion-input type="text" formControlName="nome_inst" (keyup)="Validacoes('nome_inst')" (ionFocus)="Validacoes('nome_inst')" (ionBlur)="Validacoes('nome_inst')"></ion-input>
     </ion-item>
 
     <ion-item padding>
       <ion-label id="lbl_ano">Data da Conclusão:</ion-label>
-      <ion-datetime (click)="RetornaAno()" displayFormat="MM/YYYY" pickerFormat="MM YYYY" [min]="1990" [max]="2025"
+      <ion-datetime (click)="RetornaAno()" displayFormat="YYYY" pickerFormat="YYYY" [min]="1990" [max]="2025"
         cancelText="Cancelar" doneText="OK" formControlName="ano" (keyup)="Validacoes('ano')" (ionFocus)="Validacoes('ano')"
         (ionBlur)="Validacoes('ano')"></ion-datetime>
     </ion-item>
 
     <ion-item padding>
-      <ion-label id="lbl_tipo">Tipo:</ion-label>
-      <ion-select cancelText="Cancelar" (keyup)="Validacoes('tipo')" formControlName="tipo_curs" (ionFocus)="Validacoes('tipo_curs')"
-        (ionBlur)="Validacoes('tipo_curs')">
-        <ion-option *ngFor="let tipo of tipo_curs" [value]="tipo">{{tipo}}</ion-option>
+      <ion-label id="lbl_tipo_curso">Tipo:</ion-label>
+      <ion-select cancelText="Cancelar" (keyup)="Validacoes('tipo_curso)')" formControlName="tipo_curso" (ionFocus)="Validacoes('tipo_curso')"
+        (ionBlur)="Validacoes('tipo_curso')">
+        <ion-option *ngFor="let tipo of tipo_curso" [value]="tipo">{{tipo}}</ion-option>
       </ion-select>
     </ion-item>
 
@@ -46,7 +46,7 @@
       </ion-input>
     </ion-item>
 
-
+    <button ion-button (click)="goToPage6()" style="width: 100px; float:right">Próximo</button>
 
   </form>
 
