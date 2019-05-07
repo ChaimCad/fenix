@@ -15,6 +15,7 @@ import { EnderecoPage } from '../pages/pags_curriculo/endereco/endereco';
 import { AreaAtuacaoPage } from '../pages/pags_curriculo/area-atuacao/area-atuacao';
 
 import { QualificacoesPage } from '../pages/pags_curriculo/qualificacoes/qualificacoes';
+import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
 
 
 
@@ -24,6 +25,7 @@ import { QualificacoesPage } from '../pages/pags_curriculo/qualificacoes/qualifi
 export class MyApp {
   rootPage:any = AreaAtuacaoPage;
 
+ 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

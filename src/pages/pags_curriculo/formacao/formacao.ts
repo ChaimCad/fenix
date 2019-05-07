@@ -34,14 +34,12 @@ export class FormacaoPage {
     this.ano = dNow.getFullYear()
     //console.log(this.ano) 
 
- 
-
   }
 
 
   public formulario: FormGroup = new FormGroup({
     'escolaridade': new FormControl(null, [Validators.required]),
-    'nome_inst': new FormControl(null, [Validators.required, Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'nome_inst': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
     'ano': new FormControl(null, [Validators.required])
   })
 

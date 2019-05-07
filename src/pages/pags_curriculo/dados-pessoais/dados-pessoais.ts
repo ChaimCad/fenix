@@ -55,8 +55,8 @@ export class DadosPessoaisPage {
   }
 
   public formulario_dadospessoais:FormGroup = new FormGroup({
-    'nome' : new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
-    'sobrenome': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'nome' : new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(20), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'sobrenome': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(50), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
     'sexo': new FormControl(null, [Validators.required]),
     'email': new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]),
     'telefone': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20), Validators.pattern('[0-9]+')]),
