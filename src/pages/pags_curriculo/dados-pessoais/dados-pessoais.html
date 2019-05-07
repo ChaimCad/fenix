@@ -11,27 +11,21 @@
 </ion-header>
 
 <ion-content padding>
-
-<ion-list> 
-
-<form [formGroup]="formulario_dadospessoais" >
-  <!--(ngSubmit)="goToPage2()"-->
-
-  <ion-item padding>
-    <ion-label id="lbl_nome">Nome:</ion-label>
-    <ion-input type="text" #nome formControlName="nome" (keyup)="Valida('nome')" (ionFocus)="Valida('nome')" ></ion-input>
-  </ion-item>
-  <!--<small *ngIf="formulario.get('nome').valid && formulario.get('nome').touched" >OK!</small>
-  <small *ngIf="!formulario.get('nome').valid && formulario.get('nome').touched">Erro!</small>-->
  
 
-
-<ion-item padding>
-  <ion-label id="lbl_sobrenome">Sobrenome:</ion-label>
-  <ion-input type="text" formControlName="sobrenome" (keyup)="Valida('sobrenome')" (ionFocus)="Valida('sobrenome')" ></ion-input>
+<form [formGroup]="formulario_dadospessoais">
+  <!--(ngSubmit)="goToPage2()"-->
+<ion-item padding> 
+    <ion-label id="lbl_nome">Nome:</ion-label>
+    <ion-input id="input_nome" type="text" formControlName="nome" (keyup)="Valida('nome')" (ionFocus)="Valida('nome')"></ion-input>
 </ion-item>
-
+  <!--<small *ngIf="formulario.get('nome').valid && formulario.get('nome').touched" >OK!</small>
+  <small *ngIf="!formulario.get('nome').valid && formulario.get('nome').touched">Erro!</small>-->
 <ion-item padding>
+    <ion-label id="lbl_sobrenome">Sobrenome:</ion-label>
+    <ion-input type="text" formControlName="sobrenome" (keyup)="Valida('sobrenome')" (ionFocus)="Valida('sobrenome')" (ngchange)="Valida('sobrenome')" ></ion-input>
+</ion-item>
+<ion-item padding class = "teste">
     <ion-label id="lbl_sexo">Sexo:</ion-label>
       <ion-select cancelText="Cancelar"  (ionFocus)="Valida('sexo')" (ionBlur)="Valida('sexo')" formControlName="sexo">
         <ion-option *ngFor="let sexos of sexo" >{{sexos}}</ion-option>
@@ -50,12 +44,12 @@
 
 <ion-item padding>
     <ion-label id="lbl_celular">Celular:</ion-label>
-    <ion-input type="text" [value]="celular" formControlName="celular" (keyup)="Valida('celular')" (ionFocus)="Valida('celular')"></ion-input>
+    <ion-input type="text"  formControlName="celular" (keyup)="Valida('celular')" (ionFocus)="Valida('celular')"></ion-input>
 </ion-item>
 
-<ion-item padding>
+<ion-item padding >
     <ion-label id="lbl_estado_civil">Estado civil:</ion-label>
-      <ion-select cancelText="Cancelar" formControlName="estado_civil" (ionFocus)="Valida('estado_civil')" (ionBlur)="Valida('estado_civil')">
+      <ion-select id="funcio" cancelText="Cancelar" formControlName="estado_civil" (ionFocus)="Valida('estado_civil')" (ionBlur)="Valida('estado_civil')">
         <ion-option *ngFor="let estado of estado_civil" >{{estado}}</ion-option>
       </ion-select>
 </ion-item>
@@ -80,6 +74,6 @@
 
 </form>
 
-</ion-list>
+
 
 </ion-content>

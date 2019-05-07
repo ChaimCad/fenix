@@ -52,7 +52,6 @@ export class DadosPessoaisPage {
    
     this.max_idade = ((this.ano-90) + '-' + this.mes + '-' + this.data).toString();
    
-    
   }
 
   public formulario_dadospessoais:FormGroup = new FormGroup({
@@ -156,8 +155,6 @@ export class DadosPessoaisPage {
       });
       alert.present();
     }
-    
-    
   }
 
   

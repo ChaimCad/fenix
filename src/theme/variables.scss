@@ -87,26 +87,17 @@ $colors: (
 @import "roboto";
 @import "noto-sans";
 
-$text-input-highlight-color-invalid: (
-   #f53d3d
+$item-md-body-text-line-height: (
+  0
+);
+$item-ios-paragraph-margin-bottom: (
+  0
 );
 
-$text-input-highlight-color-valid: (
-   #32db64
-);
 
-$text-input-highlight-color: (
-   #488aff
-);
 
-$alert-button-font-size: (
-  16px
-);
 
-$select-input-highlight-color-invalid: (
-   #f53d3d
-);
 
-$select-highlight-color-valid: (
-   #32db64
-);
+
+
+
