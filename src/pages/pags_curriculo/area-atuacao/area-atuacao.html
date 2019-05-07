@@ -14,40 +14,41 @@
   <form [formGroup]="formulario_atuacao"> 
     
       <ion-item padding>
-        <ion-label>Atuação principal:</ion-label>
-        <ion-input type="text" placeholder="Ex: Informática, saúde." formControlName="area1" ></ion-input> 
+        <ion-label id="lbl_atuacao1">Atuação principal:</ion-label>
+        <ion-input type="text" placeholder="Ex: Informática, saúde." formControlName="area1" (ionChange)="valida('atuacao1')" (keyup)="valida('atuacao1')" (ionFocus)="valida('atuacao1')"></ion-input> 
       </ion-item>
       <ion-item padding>
-        <ion-label>Curso:</ion-label>
-        <ion-input type="text" formControlName="curso1"></ion-input> 
+        <ion-label id="lbl_curso1">Curso:</ion-label>
+        <ion-input type="text" formControlName="curso1" (ionChange)="valida('curso1')" (keyup)="valida('curso1')" (ionFocus)="valida('curso1')"></ion-input> 
       </ion-item>
 
       <br>
       <div id="sec1">
       <ion-item padding>
-        <ion-label>Atuação secundária:</ion-label>
-        <ion-input type="text" formControlName="area2"></ion-input> 
+        <ion-label id="lbl_atuacao2">Atuação secundária:</ion-label>
+        <ion-input type="text" formControlName="area2" (ionChange)="valida('atuacao2')" (keyup)="valida('atuacao2')" (ionFocus)="valida('atuacao2')"></ion-input>  
       </ion-item> 
       <ion-item padding>
-        <ion-label>Curso 2:</ion-label>
-        <ion-input type="text" formControlName="curso2"></ion-input> 
+        <ion-label id="lbl_curso2">Curso 2:</ion-label>
+        <ion-input type="text" formControlName="curso2" (ionChange)="valida('curso2')" (keyup)="valida('curso2')" (ionFocus)="valida('curso2')"></ion-input> 
       </ion-item>
     </div>
 
       <br>
       <div id="sec2">
       <ion-item padding>
-        <ion-label>Atuação terciária:</ion-label>
-        <ion-input type="text" formControlName="area3"></ion-input> 
+        <ion-label id="lbl_atuacao3">Atuação terciária:</ion-label>
+        <ion-input type="text" formControlName="area3" (ionChange)="valida('atuacao3')" (keyup)="valida('atuacao3')" (ionFocus)="valida('atuacao3')"></ion-input> 
       </ion-item>
       <ion-item padding>
-        <ion-label>Curso 3:</ion-label>
-        <ion-input type="text" formControlName="curso3"></ion-input> 
+        <ion-label id="lbl_curso3">Curso 3:</ion-label>
+        <ion-input type="text" formControlName="curso3" (ionChange)="valida('curso3')" (keyup)="valida('curso3')" (ionFocus)="valida('curso3')"></ion-input>  
       </ion-item>
     </div>
 
-      <button ion-button (click)="goToPage5()" style="width: 100px; float:right">Próximo</button>
-      <button ion-button (click)="cria()" style="width: 50px; float:left; margin-left: 15px">+</button>
+      <button ion-button (click)="goToPage5()" style="width: 100px; float:right; background-color: #FF7F50">Próximo</button>
+      <button ion-button (click)="cria()" style="width: 50px; float:left; margin-left: 15px;  background-color: #FF7F50">+</button>
+      <button ion-button id="btn_menos" (click)="apaga()" style="width: 50px; float:left; margin-left: 15px;  background-color: #FF7F50; display: none">-</button>
     </form> 
   
     

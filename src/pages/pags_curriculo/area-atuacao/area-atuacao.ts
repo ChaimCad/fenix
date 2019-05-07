@@ -40,6 +40,58 @@ export class AreaAtuacaoPage {
   
   })
 
+  valida(name: string)
+  {
+    if(name == 'atuacao1')
+    {
+      if (this.formulario_atuacao.controls.area1.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_atuacao.controls.area1.valid || this.formulario_atuacao.controls.area1.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+      }
+
+    if(name == 'atuacao2')
+    {
+      if (this.formulario_atuacao.controls.area2.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_atuacao.controls.area2.valid || this.formulario_atuacao.controls.area2.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+     }
+
+    if(name == 'atuacao3')
+    {
+      if (this.formulario_atuacao.controls.area3.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_atuacao.controls.area3.valid || this.formulario_atuacao.controls.area3.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+
+    if(name == 'curso1')
+    {
+      if (this.formulario_atuacao.controls.curso1.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_atuacao.controls.curso1.valid || this.formulario_atuacao.controls.curso1.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+
+    if(name == 'curso2')
+    {
+      if (this.formulario_atuacao.controls.curso2.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_atuacao.controls.curso2.valid || this.formulario_atuacao.controls.curso2.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+
+    if(name == 'curso3')
+    {
+      if (this.formulario_atuacao.controls.curso3.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_atuacao.controls.curso3.valid || this.formulario_atuacao.controls.curso3.touched)
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+    }
+  }
+
+
   goToPage5(){
     if (this.formulario_atuacao.invalid != true){
       this.navCtrl.push(QualificacoesPage);
@@ -55,12 +107,15 @@ export class AreaAtuacaoPage {
     }
   }
 
+  
+
 
   cria(){
    this.cont++;
    //console.log(this.cont)
    if (this.cont==1){
      document.getElementById('sec1').style.display='unset';
+     document.getElementById('btn_menos').style.display='unset';
    }
    if (this.cont==2){
     document.getElementById('sec2').style.display='unset';
@@ -78,12 +133,15 @@ export class AreaAtuacaoPage {
     
   }
 
-  valida(name: string)
-  {
-    if (this.formulario_atuacao.controls.valid)
-    document.getElementById('lbl_'+ name).style.color='#32db64';
-  else if (!this.formulario_atuacao.controls.valid || this.formulario_atuacao.controls.touched)
-    document.getElementById('lbl_'+ name).style.color='#f53d3d';
+  apaga(){
+    this.cont--;
+    if (this.cont==1)
+      document.getElementById('sec2').style.display='none';
+    if (this.cont==0)
+    {
+      document.getElementById('sec1').style.display='none';
+      document.getElementById('btn_menos').style.display='none';
+    }
   }
 
   

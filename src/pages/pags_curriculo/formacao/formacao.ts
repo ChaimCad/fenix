@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
 import { QualificacoesPage } from '../qualificacoes/qualificacoes';
-import { AlertController } from 'ionic-angular';
+
 
 /**
  * Generated class for the FormacaoPage page.
@@ -85,7 +85,7 @@ export class FormacaoPage {
 
   goToPage4() {
     if (this.formulario.status != "INVALID"){
-      this.navCtrl.push(QualificacoesPage);
+      this.navCtrl.push(AreaAtuacaoPage);
     }
     else {
       let alert = this.alertCtrl.create({
