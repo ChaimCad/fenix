@@ -33,7 +33,7 @@
     </ion-item>
 
     <ion-item padding>
-      <ion-label id="lbl_tipo">Tipo:</ion-label>
+      <ion-label id="lbl_tipo_curs">Tipo:</ion-label>
       <ion-select cancelText="Cancelar" (keyup)="Validacoes('tipo')" formControlName="tipo_curs" (ionFocus)="Validacoes('tipo_curs')"
         (ionBlur)="Validacoes('tipo_curs')">
         <ion-option *ngFor="let tipo of tipo_curs" [value]="tipo">{{tipo}}</ion-option>
@@ -46,6 +46,7 @@
       </ion-input>
     </ion-item>
 
+    <button ion-button (click)="goToPage6()" style="width: 100px; float:right">Próximo</button>
 
 
   </form>
