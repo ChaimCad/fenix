@@ -175,7 +175,7 @@ export class AreaAtuacaoPage {
    if((this.cont % 2)==0)
       this.invalido = true;
    else
-     this.invalido = false;
+     this.invalido = false; 
  }
   
 
