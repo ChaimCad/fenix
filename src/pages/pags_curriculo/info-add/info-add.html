@@ -10,26 +10,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding  style="text-align: center">
 
-<p style="font-size: 16px;">Por favor, conte-nos um pouco sobre a sua experiência de vida.<p>
+<p style="font-size: 16px;" padding>Por favor, conte-nos um pouco sobre a sua experiência de vida.<p>
 
-<div style="height: 20px"></div>
-
-<form [formGroup]="formulario_infoadd">
+<form [formGroup]="formulario_infoadd" padding>
 
  <!-- <textarea cols="35" name = "experiencia" maxlength="200" style="font-size: 90%; border: 2px solid #dedede; border-radius: 10px; height: 100px" >
         
   </textarea> -->
 
-  <ion-textarea rows = "5" style="border: 1px solid #dedede; font-size: 14px; border-radius: 15px;" formControlName="experiencia"></ion-textarea>
+  <ion-textarea rows = "7" style="border: 1px solid #dedede; font-size: 14px; border-radius: 15px; padding:8px;" formControlName="experiencia"></ion-textarea>
 
 </form>
 
   <div style="height: 20px"></div>
 
-
-  <button ion-button style="width: 100%; float:right; background-color: #FF7F50" (click)="salvar()">Enviar currículo</button>
+ 
+      <button ion-button style="width: 40%; background-color: #FF7F50;" (click)="salvar()">Enviar currículo</button>
+ 
+ 
 
 
 </ion-content>

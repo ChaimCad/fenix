@@ -18,8 +18,6 @@ import { QualificacoesPage } from '../pages/pags_curriculo/qualificacoes/qualifi
 import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
 import { InfoAddPage } from '../pages/pags_curriculo/info-add/info-add';
 
-
-
 @Component({
   templateUrl: 'app.html'
 })

@@ -34,7 +34,7 @@
 
     <ion-item padding>
       <ion-label id="lbl_tipo_curso">Tipo:</ion-label>
-      <ion-select cancelText="Cancelar" (keyup)="Validacoes('tipo_curso)')" formControlName="tipo_curso" (ionFocus)="Validacoes('tipo_curso')"
+      <ion-select cancelText="Cancelar" (keyup)="Validacoes('tipo_curso')" formControlName="tipo_curso" (ionFocus)="Validacoes('tipo_curso')"
         (ionBlur)="Validacoes('tipo_curso')">
         <ion-option *ngFor="let tipo of tipo_curso" [value]="tipo">{{tipo}}</ion-option>
       </ion-select>
