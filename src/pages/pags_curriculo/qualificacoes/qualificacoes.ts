@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { InfoAddPage } from '../info-add/info-add';
 
 /**
  * Generated class for the QualificacoesPage page.
@@ -15,9 +16,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: 'qualificacoes.html',
 })
 export class QualificacoesPage {
-  alertCtrl: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl:AlertController) {
   }
 
   ano: number;
@@ -37,11 +37,11 @@ export class QualificacoesPage {
     'curso': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
     'nome_inst': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern('[A-Za-zÀ-ú]*')]),
     'ano': new FormControl(null, [Validators.required]),
-    'tipo_curs': new FormControl(null, [Validators.required]),
+    'tipo_curso': new FormControl(null, [Validators.required]),
     'desc': new FormControl(null, [Validators.required, Validators.maxLength(10), Validators.pattern('[A-Za-zÀ-ú]*')]),
   })
 
-  public tipo_curs: Array<string> = [
+  public tipo_curso: Array<string> = [
     'Graduação',
     'Pós-graduação',
     'Técnico',
@@ -63,10 +63,10 @@ export class QualificacoesPage {
       else if (!this.formulario.controls.nome_inst.valid || this.formulario.controls.nome_inst.touched)
         document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
-    if (name == 'tipo_curs') {
-      if (this.formulario.controls.tipo_curs.valid)
+    if (name == 'tipo_curso') {
+      if (this.formulario.controls.tipo_curso.valid)
         document.getElementById('lbl_' + name).style.color = '#32db64';
-      else if (!this.formulario.controls.tipo_curs.valid || this.formulario.controls.tipo_curs.touched)
+      else if (!this.formulario.controls.tipo_curso.valid || this.formulario.controls.tipo_curs.touched)
         document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
     if (name == 'ano') {
@@ -84,10 +84,10 @@ export class QualificacoesPage {
   }
 
 
-  goToPage5() {
+  goToPage6() {
     if (this.formulario.status != "INVALID") {
 
-      this.navCtrl.push(QualificacoesPage);
+      this.navCtrl.push(InfoAddPage);
     }
     else {
       let alert = this.alertCtrl.create({
@@ -97,7 +97,6 @@ export class QualificacoesPage {
       });
       alert.present();
     }
-
 
   }
 

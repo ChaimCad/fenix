@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
 import { QualificacoesPage } from '../qualificacoes/qualificacoes';
+import { InfoAddPage } from '../info-add/info-add';
 
 
 /**
@@ -53,6 +54,8 @@ export class FormacaoPage {
     'Ensino Técnico',
     'Ensino Superior'
   ]
+  
+  
 
   public Validacoes(name: string) {
     if (name == 'escolaridade') {
@@ -60,6 +63,9 @@ export class FormacaoPage {
         document.getElementById('lbl_' + name).style.color = '#32db64';
       else if (!this.formulario.controls.escolaridade.valid || this.formulario.controls.escolaridade.touched)
         document.getElementById('lbl_' + name).style.color = '#f53d3d';
+      if (this.formulario.value.escolaridade == 'Analfabeto(a)'){
+        this.navCtrl.push(InfoAddPage);
+      }
     }
     if (name == 'nome_inst') {
       if (this.formulario.controls.nome_inst.valid)

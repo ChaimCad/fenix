@@ -16,6 +16,8 @@ import { DadosPessoaisPage } from '../dados-pessoais/dados-pessoais';
 })
 export class Curriculo1Page {
 
+  public img_curriculo: string = '../../assets/imgs/image_32775334.png'
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

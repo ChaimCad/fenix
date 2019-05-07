@@ -16,6 +16,7 @@ import { AreaAtuacaoPage } from '../pages/pags_curriculo/area-atuacao/area-atuac
 
 import { QualificacoesPage } from '../pages/pags_curriculo/qualificacoes/qualificacoes';
 import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
+import { InfoAddPage } from '../pages/pags_curriculo/info-add/info-add';
 
 
 
@@ -23,7 +24,9 @@ import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = AreaAtuacaoPage;
+  rootPage:any = Curriculo1Page;
+
+  
 
  
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
