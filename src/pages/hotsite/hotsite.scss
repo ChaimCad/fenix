@@ -124,6 +124,18 @@ page-hotsite {
         text-align: justify;
     }
 
+    .motivo1hide{
+        display: none;
+    }
+
+    .motivo2hide{
+        display: none;
+    }
+
+    .motivo3hide{
+        display: none;
+    }
+
     .motivo2{
         height: calc(0.35 * 100vh) ;
         width: calc(0.28 * 100vw);
@@ -154,7 +166,8 @@ page-hotsite {
     
 #rodape{
     width: 100%;
-    height: calc(0.08 * 150vw);;
+    height: 0;
+    //min-height: 80px;
     background-color: #ffffff;
     color: black;
     bottom:0;
@@ -175,12 +188,9 @@ page-hotsite {
     float: left;
 }
 
-#rodapeTextA{
+.rodapeTextAB {
+    color: black;
     margin: 0 0 calc(-0.1 * 11.5vw) 0;
-}
-
-#rodapeTextB{
-    margin: 0 0 0 calc(0.5 * 38vw);
 }
 
 #rodapeBot{
@@ -272,6 +282,20 @@ ion-navbar.toolbar {
     #headLogin{
       margin: 3.5% 1% 0 0;
     }
+
+    #rodapeText {
+        margin: 4vw 2vw;
+        font-size: calc(0.023 * 100vw);
+    }
+
+    #rodapeBot {
+        height: calc(0.07 * 100vw);
+    }
+
+    #rodapeBotText1, #rodapeBotText2, #rodapeBotText3 ,#rodapeBotText4 {
+        margin-top: 1.5%;
+        font-size: calc(1 * 2.5vw);
+    }
   }
 
   #headLogin:hover{
@@ -293,7 +317,7 @@ ion-navbar.toolbar {
     }
 
     .motivos{
-        height: calc(0.8 * 100vh);
+        height: calc(0.55 * 100vw);
         width: calc(1 * 100vw);
         display: flex;
         justify-content: center;
@@ -301,6 +325,42 @@ ion-navbar.toolbar {
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
+    }
+
+    .apresenta_motivo{
+        background-color: #564d65;
+        padding: calc(0.128 * 100vw) calc(0.14 * 100vw);
+        
+        background-image: url("../../assets/imgs/motivo1.png");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .apresenta_motivo2{
+        background-color: #605474;
+        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+
+
+    }
+
+    .apresenta_motivo3{
+        background-color: #564d65;
+        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+
+    }
+
+    .motivo1{
+        height: calc(0.35 * 100vh) ;
+        width: calc(0.28 * 100vw);
+        margin: 1em 0 0 calc(0.02 * 100vh);
+    }
+    .motivo1 h1{
+        font-size: calc(0.020 * 100vw);
+        font-family: raleway;
+    }
+    .motivo1 p{
+        font-size: calc(0.015 * 100vw);
+        text-align: justify;
     }
   }
   
@@ -357,7 +417,7 @@ ion-navbar.toolbar {
     }
 
     .motivos{
-        height: calc(1.1 * 100vh);
+        height: calc(4.45 * 100vw);
         width: calc(1 * 100vw);
         color: #f5fbef;
         background-color: #011627;
@@ -365,6 +425,7 @@ ion-navbar.toolbar {
         justify-content: center;
         align-items: center;
         text-align: center;
+        flex-wrap: wrap;
     }
 
     #questao{
@@ -374,70 +435,92 @@ ion-navbar.toolbar {
     }
 
     .apresenta_motivo{
-        padding: calc(0.2 * 100vh) calc(0.4 * 100vw);
+        padding: calc(0.3 * 100vw) calc(0.4 * 100vw);
         background-image: url("../../assets/imgs/motivo1.png");
         background-position: center center;
         background-size: cover;
+        margin: 9em auto 0em auto;
+        /*margin-top: 9em;*/
     }
 
     .apresenta_motivo2{
-        background-color: #605474;
-        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        padding: calc(0.3 * 100vw) calc(0.4 * 100vw);
         background-image: url("../../assets/imgs/motivo2.jpg");
         background-position: center center;
         background-size: cover;
+        margin: 0em auto 0em auto;
     }
 
     .apresenta_motivo3{
-        background-color: #564d65;
-        padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        padding: calc(0.3 * 100vw) calc(0.4 * 100vw);
         background-image: url("../../assets/imgs/motivo3.jpg");
         background-position: center center;
         background-size: cover;
+        margin: 0em auto 0em auto;
     }
 
     .motivo1{
-        height: calc(0.35 * 100vh) ;
-        width: calc(0.28 * 100vw);
-        margin: 1em 0 0 calc(0.02 * 100vh);
-    }
-    .motivo1 h1{
-        font-size: calc(0.020 * 100vw);
-        font-family: raleway;
-    }
-    .motivo1 p{
-        font-size: calc(0.015 * 100vw);
-        text-align: justify;
+        display: none;
     }
 
     .motivo2{
-        height: calc(0.35 * 100vh) ;
-        width: calc(0.28 * 100vw);
-        margin: 1em 0 0 calc(0.035 * 100vh);
-    }
-    .motivo2 h1{
-        font-size: calc(0.020 * 100vw);
-        font-family: raleway;
-    }
-    .motivo2 p{
-        font-size: calc(0.015 * 100vw);
-        text-align: justify;
+        display: none;
     }
 
     .motivo3{
-        height: calc(0.35 * 100vh) ;
-        width: calc(0.28 * 100vw);
-        margin: 1em 0 0 calc(0.035 * 100vh);
+        display: none;
     }
-    .motivo3 h1{
-        font-size: calc(0.020 * 100vw);
+    
+    .motivo1hide{
+        display: flex;
+        text-align: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: calc(0.1 * 100vw) calc(0.1 * 100vw);
+    }
+
+    .motivo1hide h1{
+        font-size: calc(0.06 * 100vw);
         font-family: raleway;
     }
-    .motivo3 p{
-        font-size: calc(0.015 * 100vw);
+    .motivo1hide p{
+        font-size: calc(0.045* 100vw);
         text-align: justify;
     }
 
+    .motivo2hide{
+        display: flex;
+        text-align: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: calc(0.1 * 100vw) calc(0.1 * 100vw);
+    }
+
+    .motivo2hide h1{
+        font-size: calc(0.06 * 100vw);
+        font-family: raleway;
+    }
+    .motivo2hide p{
+        font-size: calc(0.045* 100vw);
+        text-align: justify;
+    }
+
+    .motivo3hide{
+        display: flex;
+        text-align: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: calc(0.1 * 100vw) calc(0.1 * 100vw);
+    }
+
+    .motivo3hide h1{
+        font-size: calc(0.06 * 100vw);
+        font-family: raleway;
+    }
+    .motivo3hide p{
+        font-size: calc(0.045* 100vw);
+        text-align: justify;
+    }
   }
    
 }
