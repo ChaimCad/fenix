@@ -46,9 +46,16 @@
       </ion-item>
     </div>
 
-      <button ion-button (click)="goToPage5()" style="width: 100px; float:right; background-color: #FF7F50">Próximo</button>
-      <button ion-button (click)="cria()" style="width: 50px; float:left; margin-left: 15px;  background-color: #FF7F50">+</button>
-      <button ion-button id="btn_menos" (click)="apaga()" style="width: 50px; float:left; margin-left: 15px;  background-color: #FF7F50; display: none">-</button>
+
+    <ion-item no-lines >
+      <ion-label style="margin-left: 0">Não possuo</ion-label>
+      <ion-checkbox color="dark" checked="false" (click)="nao_possuo()" style="margin-left: 0 "></ion-checkbox>
+    </ion-item>
+   
+
+      <button ion-button (click)="goToPage5()" style="width: 100px; float:right; background-color: #FF7F50; margin-top: 10px">Próximo</button>
+      <button ion-button (click)="cria()" style="width: 50px; float:left; margin-left: 15px;  background-color: #FF7F50; margin-top: 10px">+</button>
+      <button ion-button id="btn_menos" (click)="apaga()" style="width: 50px; float:left; margin-left: 15px;  background-color: #FF7F50; display: none; margin-top: 10px">-</button>
     </form> 
   
     
