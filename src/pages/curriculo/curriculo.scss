@@ -1,0 +1,325 @@
+ion-card {
+  display: block;
+  overflow: hidden;
+  width: 60%;
+}
+
+
+
+page-curriculo {
+ 
+
+  a:hover.botao_perfil {
+    background-color: azure;
+  }
+
+  
+
+
+  @media screen and (min-width:1300px) {
+    #margem_user1 {
+      margin-top: 50px;
+      margin-left: 7vw;
+      width: 82.5vw;
+      height: 41vh;
+      background: #104E8B;
+      //color: #FFF;
+      padding: 1.5vh 1vw 1.5vh 1vw;
+      border: 5px solid  #104E8B;
+      border-radius: 25px;
+    }
+
+    a.botao_perfil {
+      background-color: cornflowerblue;
+      width: 50px;
+      margin-bottom: 50px;
+      margin-left: 30%;
+      text-align: center;
+      padding: 3px;
+      color: black;
+      margin-top: 50px;
+      text-decoration: none;
+  
+      
+    }
+    #margem_user2 {
+      margin-top: 20px;
+      margin-left: 7vw;
+      width: 41vw;
+      height: 70vh;
+      background: #104E8B;
+      //color: #FFF;
+      padding: 20px;
+      border: 5px solid  #104E8B;
+      border-radius: 25px
+      
+      
+    }
+
+    
+    #margem_user3 {
+    
+      margin-left: 50%;
+      width: 41vw;
+      height: 70vh;
+      background: #104E8B;
+      //color: #FFF;
+      padding: 20px;
+      border: 5px solid  #104E8B;
+      border-radius: 25px;
+      margin-top: -70vh
+      
+      
+    }
+
+    .alterar {
+      background-color: orange;
+      width: 28px;
+      height: 3vh;
+      text-align: center;
+      color: white;
+      margin-left: 13vw;
+      margin-top: 1vh;
+      float: left;
+      margin-top: 8vh; 
+      padding-top: 2px;
+    }
+
+    .caixa {
+      border: 0;
+      margin-top: 7vh; 
+      margin-left: 12vw;
+      background-color: #104E8B;
+      color: white;
+      font-weight: bold;
+      font-size: 27px;
+      width: 300px;
+      margin-top: 42px;
+    }
+
+    #informacoes{
+      margin-top: 3px; 
+      margin-left: 12vw;
+      color: white;
+    }
+
+    #img_user {
+      width: 120px;
+      margin-left: 20px;
+      margin-right: auto;
+      
+    }
+
+    .img {
+      border-radius: 7%;
+      width: calc(0.5 * 20vw);
+      margin-top: 5vh;
+    }
+
+    #inf {
+      width: calc(0.1 * 570vw);
+      background-color: #104E8B;
+      margin-top: calc(-0.1 * 140vw);;
+      //color: #FFF;
+    }
+
+    #inf2 {
+      width: 100px;
+      margin-left: 2%;
+      margin-top: 10px;
+      padding-top: 30px; 
+    }
+  
+    #inf3 {
+      margin-left: 45%;
+      margin-top: -26px;
+      float:left;
+     
+    }
+
+    #inf4 {
+      width: 400px;
+      margin-left: 2%;
+      margin-top: 10px;
+      padding-top: 30px; 
+    }
+  
+    
+  }
+
+  @media screen and (max-width:1300px) {
+    #margem_user1 {
+      margin-top: 10px;
+      width: 77%;
+      height: 25vh;
+      margin-left: 5vw;
+      background: #104E8B;
+      //color: #FFF;
+      padding: 1.5vh 1vw 1.5vh 1vw;
+      border: 5px solid  #104E8B;
+      border-radius: 25px;
+    }
+
+    #margem_user2 {
+      margin-top: 20px;
+      width: 77vw;
+      height: 70vh;
+      margin-left: 5vw;
+      background: #104E8B;
+      //color: #FFF;
+      padding: 20px;
+      border: 5px solid  #104E8B;
+      border-radius: 25px
+    }
+
+
+    #margem_user3 {
+      margin-top: 20px;
+      width: 77vw;
+      height: 70vh;
+      margin-left: 5vw;
+      background: #104E8B;
+      //color: #FFF;
+      padding: 20px;
+      border: 5px solid  #104E8B;
+      border-radius: 25px
+  
+    }
+
+    .alterar {
+      background-color: orange;
+      width: 25px;
+      height: 3.5vh;
+      text-align: center;
+      margin-left: 35vw;
+      margin-top: -8.4vh;
+      float: left;
+    }
+
+    .caixa {
+      border: 0;
+      margin-left: 6vw;
+      background-color: #104E8B;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      width: 150px;
+    }
+
+    
+
+    .img {
+      border-radius: 7%;
+      width: 13vw;
+    }
+
+    #inf {
+      width: 15px;
+      background-color: #104E8B;
+      margin-left: 50px;
+      margin-top: -100px;
+      //color: #FFF;
+    }
+  
+
+  #teste {
+    float: left;
+    width: 170px;
+    height: 50px;
+    background-color: #104E8B;
+  }
+
+  
+
+#margem_user1
+{
+  margin-top: 20px;
+  margin-left: 100px;
+    margin-right: auto;
+  width: 550px;
+  height: 300px;
+  background: #104E8B;
+  /*color: #FFF;*/
+  padding: 20px;
+  border: 5px solid  #104E8B;
+  border-radius: 25px
+}
+#margem_user2
+{
+  margin-top: 20px;
+  margin-left: 100px;
+    margin-right: auto;
+  width: 550px;
+  height: 300px;
+  background: #104E8B;
+  /*color: #FFF;*/
+  padding: 20px;
+  border: 5px solid  #104E8B;
+  border-radius: 25px
+}
+
+#img_user{
+    width: 120px;
+    display: block;
+    margin-left: 30px;
+    margin-right: auto;
+    padding-top: 15px;
+ 
+}
+
+  #botao_perfil{
+    background-color: cornflowerblue;
+    width: 50px;
+    margin-left: 30%;
+    margin-top: 20px;
+    text-align: center;
+    padding: 3px;
+    
+  }
+
+#inf{
+  width: 800px;
+  background-color: #104E8B;
+  margin-left: auto;
+    margin-right: auto;
+    margin-top: -163px;
+    /*color: #FFF;*/
+  
+ }
+#inf2{
+  width: 400px;
+  margin-left: 2%;
+    margin-top: 10px;
+}
+#inf3{
+  margin-left: 45%;
+    margin-top: -26px;
+    float:left
+}
+
+#inf4{
+  width: 400px;
+  margin-left: 2%;
+    margin-top: 10px;
+}
+
+#teste{
+  float: left;
+  width: 200px;
+  height: 50px;
+  background-color: #104E8B;
+}
+
+.img{
+  border-radius: 7%;
+}
+    
+ #alterar{
+      background-color: orange;
+      width: 30px;
+      height: 20px;
+      padding-left: 7px;
+      float: left;
+    }
+ }
+}

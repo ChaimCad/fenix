@@ -1,3 +1,13 @@
+ion-navbar.toolbar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
 @media screen and (orientation: landscape) {
     ion-app.md [padding] .scroll-content {
       padding-left: calc(constant(safe-area-inset-left) + 0px);
@@ -9,8 +19,6 @@
   ion-app.md [padding] .scroll-content {
     padding: 0px; 
  }
-  
-
 page-hotsite {
     .cabecalho {
         background-image: url("../../assets/imgs/fenix.png");
@@ -25,6 +33,11 @@ page-hotsite {
         text-align: center;
     }
 
+    #headLogoImg{
+        width: 10%;
+        min-width: 90px;
+        margin: 0.5% 0 0 0; 
+    }   
     .cabecalho h1{
         font-size: calc(0.085 * 100vw);
         font-family: raleway;
@@ -86,6 +99,13 @@ page-hotsite {
     .apresenta_motivo{
         background-color: #564d65;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
+        margin: calc(0.02 * 100vh);
+        -webkit-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        -moz-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
+        margin-top: calc(-0.02 * 100vw);
+        
+    }
         margin: 5em 0 0 calc(0.032 * 100vh);
         background-image: url("../../assets/imgs/motivo1.png");
         background-position: center center;
@@ -234,7 +254,6 @@ page-hotsite {
 #rodapeBotA:hover{
     text-decoration: underline;
 }
-
 //------------------------------------------------------------------
 
 ion-navbar.toolbar {
