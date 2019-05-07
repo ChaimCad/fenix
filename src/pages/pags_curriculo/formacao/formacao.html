@@ -16,7 +16,7 @@
   <form [formGroup]="formulario">
     <ion-item padding>
       <ion-label id="lbl_escolaridade">Escolaridade:</ion-label>
-      <ion-select cancelText="Cancelar" formControlName="escolaridade"  (keyup)="Validacoes('escolaridade')" (ionFocus)="Validacoes('escolaridade')" (ionBlur)="Validacoes('escolaridade')">
+      <ion-select cancelText="Cancelar" formControlName="escolaridade" (ionFocus)="Validacoes('escolaridade')" (ionBlur)="Validacoes('escolaridade')"  >
         <ion-option *ngFor="let escola of escolaridade" [value]="escola">{{escola}}</ion-option>
       </ion-select>
     </ion-item>
@@ -27,8 +27,8 @@
     </ion-item>
 
     <ion-item padding>
-      <ion-label id="lbl_ano">Data da Conclusão:</ion-label>
-      <ion-datetime (click)="RetornaAno()" displayFormat="MM/YYYY" pickerFormat="MM YYYY" [min]="1990" [max]="2025" cancelText="Cancelar"
+      <ion-label id="lbl_ano">Ano de Conclusão:</ion-label>
+      <ion-datetime (click)="RetornaAno()" displayFormat="YYYY" pickerFormat="YYYY" [min]="1960" [max]="ano" cancelText="Cancelar"
         doneText="OK" formControlName="ano" (keyup)="Validacoes('ano')"(ionFocus)="Validacoes('ano')" (ionBlur)="Validacoes('ano')"></ion-datetime>
     </ion-item>
 

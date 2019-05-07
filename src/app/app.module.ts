@@ -36,7 +36,9 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: ''
+    }),
     HotsitePageModule,
     CurriculoPageModule,
     HttpClientModule,
