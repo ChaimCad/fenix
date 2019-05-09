@@ -17,6 +17,7 @@ import { IntroPageModule } from '../pages/intro/intro.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { InicioPageModule } from '../pages/inicio/inicio.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
+import { SideMenuPageModule } from '../pages/side-menu/side-menu.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
     IntroPageModule,
     LoginPageModule,
     InicioPageModule,
-    CadastroPageModule
+    CadastroPageModule,
+    SideMenuPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
