@@ -1,39 +1,106 @@
+@media screen and (orientation: landscape) {
+    ion-app.ios [padding] .scroll-content {
+      padding-left: calc(constant(safe-area-inset-left) + 0px);
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding: 0px calc(env(safe-area-inset-right) + 0px) 0px calc(env(safe-area-inset-left) + 0px);
+    }
+  }
+
+  ion-app.md [padding] .scroll-content {
+    padding: 0px;
+  }
+  
 page-inicio {
 
     .slides{
         width: 100%;
-        height: 76.1vh;
-      //  background-color: rgb(148, 196, 228);
+        height: 500px;
+        background-color: rgb(255, 153, 0);
     }
 
+    .mae{
+        height: 100%;
+        background-color: rgb(255, 153, 0);
+        
+    }
     .container{
         width: 100%;
         height: 40vh;
-        background: #fff;
+        background: rgb(255, 153, 0);
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
-    .slider{
-       /* border-width: thick;
-        border-style: ridge;
-        border-color: silver;*/
-    }
-
     .slide_img{
-        width: 35vw;
+        width: 150px;
+
     }
 
-    .button{
+    .slider h1,h2,p{
+        color: #ffffff;
+    }
+
+
+    #inicioButton{
         width: 100%;
         height: 25%;
-        margin-top:4%;
+        margin-bottom: 0;
     }
+    .button{
+        width: 100%;
+        margin-bottom: 5px;
+        background-color: rgb(255, 153, 0);
+    }
+    #bt{
+            background: #db581c;
+            background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+            background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+            background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+            background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+            -webkit-border-radius: 5;
+            -moz-border-radius: 5;
+            border-radius: 5px;
+            text-shadow: 1px 1px 3px #666666;
+            font-family: Arial;
+            color: #000000;
+            font-size: 14px;
+            width: calc(0.4 * 100vw);
+            padding: 0.8vw 1.1vw 0.8vw 1.1vw;
+            text-decoration: none;
+    }
+    #bt:hover{
+        background: #dbdbdb;
+        background-image: -webkit-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: -moz-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: -ms-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: -o-linear-gradient(top, #dbdbdb, #dbdbdb);
+        background-image: linear-gradient(to bottom, #dbdbdb, #dbdbdb);
+        text-decoration: none;
+      }
 
-    #buttonText{
-        font-size: calc( 1* 3vh);
+      @media screen and (max-width: 600px){
+        #bt{
+            background: #db581c;
+            background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+            background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+            background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+            background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+            -webkit-border-radius: 5;
+            -moz-border-radius: 5;
+            border-radius: 5px;
+            text-shadow: 1px 1px 3px #666666;
+            font-family: Arial;
+            color: #000000;
+            font-size: 16px;
+            width: calc(0.6 * 100vw);
+            padding: 1.5vw 1.1vw 1.5vw 1.1vw;
+            text-decoration: none;
+    }
     }
 
 }

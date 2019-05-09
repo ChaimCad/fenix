@@ -2,23 +2,26 @@
     stroke: orangered;
 }
 
-.refresher-refreshing .spinner-crescent circle {
-    stroke: orangered;
-  }
-
-  .loading-wp .spinner-crescent circle {
+.infinite-loading-spinner .spinner-crescent circle {
     stroke: orangered;
   }
 
   .loading-ios .spinner-crescent circle {
     stroke: orangered;
   }
-
-  .infinite-loading-spinner .spinner-crescent circle {
+  .loading-md .spinner-crescent circle {
+    stroke: orangered;
+  }
+  .loading-wp .spinner-crescent circle {
     stroke: orangered;
   }
   
+  ion-app.ios [padding] .scroll-content {
+    padding: 0;
+  }
+
 page-intro {
+
     .container{
         width: 90vw;
         height: 80vh;

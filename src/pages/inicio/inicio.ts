@@ -2,7 +2,6 @@ import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { TabsPage } from '../tabs/tabs';
-import { CadastroPage } from '../cadastro/cadastro';
 
 /**
  * Generated class for the InicioPage page.
@@ -31,10 +30,6 @@ export class InicioPage {
 
   goToTabsPage(){
     this.navCtrl.setRoot(TabsPage);
-  }
-
-  goToCadastroPage(){
-    this.navCtrl.push(CadastroPage);
   }
 
 }

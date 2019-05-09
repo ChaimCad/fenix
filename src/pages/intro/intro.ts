@@ -24,21 +24,16 @@ export class IntroPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IntroPage');
-
-    setTimeout(()=>{
-      this.presentLoading();
-    }, 1000)
+    this.presentLoading();
    
-  
+
   }
 
   presentLoading() {
     this.loader = this.loadingCtrl.create({
-      
-     spinner:'crescent',
-
      // 
-    // content: '<br><br> Por favor aguarde...',
+     //content: "Por favor aguarde...",
+     spinner:'crescent',
 
       dismissOnPageChange: true
      
@@ -48,7 +43,7 @@ export class IntroPage {
     setTimeout(() => {
       this.loader.dismiss();
       this.onDidDismiss();
-    }, 3000);
+    }, 3500);
 
     
     }
