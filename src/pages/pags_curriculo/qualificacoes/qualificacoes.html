@@ -42,8 +42,8 @@
 
     <ion-item padding>
       <ion-label id="lbl_desc">Descrição:</ion-label>
-      <ion-input type="text" formControlName="desc" (keyup)="Validacoes('desc')"(ionFocus)="Validacoes('desc')" (ionBlur)="Validacoes('desc')">
-      </ion-input>
+      <ion-textarea rows = "7" style="border: 1px solid #dedede; font-size: 14px; border-radius: 15px; padding:8px;" formControlName="desc" (keyup)="Validacoes('desc')"(ionFocus)="Validacoes('desc')" (ionBlur)="Validacoes('desc')">
+      </ion-textarea>
     </ion-item>
 
     <button ion-button (click)="goToPage6()" style="width: 100px; float:right; background-color: #FF7F50">Próximo</button>

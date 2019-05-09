@@ -28,13 +28,10 @@ export class QualificacoesPage {
   }
 
   ano: number;
-  mes: number;
+
 
   public RetornaAno() {
     var dNow = new Date();
-
-    this.mes = dNow.getMonth()
-    //return mes
 
     this.ano = dNow.getFullYear()
     //console.log(this.ano) 
@@ -49,9 +46,9 @@ export class QualificacoesPage {
   })
 
   public tipo_curso: Array<string> = [
+    'Técnico',
     'Graduação',
     'Pós-graduação',
-    'Técnico',
     'Mestrado',
     'Doutorado',
     'Outros'
