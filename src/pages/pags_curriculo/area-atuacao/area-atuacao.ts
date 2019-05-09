@@ -6,6 +6,7 @@ import { AlertController } from 'ionic-angular';
 
 import { QualificacoesPage } from '../qualificacoes/qualificacoes';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { InfoAddPage } from '../info-add/info-add';
 
 /**
  * Generated class for the AreaAtuacaoPage page.
@@ -22,16 +23,24 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AreaAtuacaoPage {
 
   public cont = 0;
-  public invalido = true;
+  public invalido:boolean = true;
+
+  public cor:boolean = false;
 
   public area22:string = '';
   public curso22: string = '';
   public area33:string = '';
   public curso33: string = '';
 
+  public nome_instituicao:string;
+  public escolaridade:string;
+
   public cont2 = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+    this.nome_instituicao = this.navParams.get('param1');
+    this.escolaridade = this.navParams.get('param2');
+    
   }
 
   ionViewDidLoad() {
@@ -100,27 +109,54 @@ export class AreaAtuacaoPage {
 
   goToPage5(){
 
-    if (this.formulario_atuacao.invalid != true && this.invalido != true){
-      let alert = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: 'Preencha todos os campos corretamente.',
-        buttons: ['Ok']
-      });
-      alert.present();
+    var a:boolean = true;
+
+    if (this.invalido == false){
+      if (this.formulario_atuacao.invalid == false){
+        let alert = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: 'Preencha todos os campos corretamente.',
+          buttons: ['Ok']
+        });
+        alert.present();
+      }
+      else
+      {
+        a = false;
+        this.navCtrl.push(InfoAddPage);
+      }
+      
     }
 
-    else if (this.formulario_atuacao.invalid != true || this.invalido != true){
-      this.navCtrl.push(QualificacoesPage);
+    
+    else if ((this.formulario_atuacao.invalid == false) && a == true){
+
+      if (this.escolaridade == 'Ensino Técnico' || this.escolaridade == 'Ensino Superior'){
+        this.cor = true;
+        this.navCtrl.push(QualificacoesPage, {
+          param1: this.nome_instituicao,
+          param2: this.formulario_atuacao.value.curso1,
+          param3: this.cor
+        });
+      }
+      else
+      {
+        this.navCtrl.push(QualificacoesPage);
+      }
     }
+
    
-    else
+    else 
     {
-      let alert = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: 'Preencha todos os campos corretamente.',
-        buttons: ['Ok']
-      });
-      alert.present();
+      if (a == true){
+        let alert = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: 'Preencha todos os campos corretamente.',
+          buttons: ['Ok']
+        });
+        alert.present();
+      }
+      
     }
   }
 

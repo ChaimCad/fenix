@@ -21,15 +21,15 @@
       </ion-select>
     </ion-item>
 
-    <ion-item padding>
+    <ion-item padding id="item_inst">
       <ion-label id="lbl_nome_inst">Instituição de ensino:</ion-label>
-      <ion-input type="text" formControlName="nome_inst" (keyup)="Validacoes('nome_inst')" (ionFocus)="Validacoes('nome_inst')" (ionBlur)="Validacoes('nome_inst')"></ion-input>
+      <ion-input type="text" [value]="nome_instituicao" formControlName="nome_inst" (keyup)="Validacoes('nome_inst')" (ionFocus)="Validacoes('nome_inst')" (ionBlur)="Validacoes('nome_inst')"></ion-input>
     </ion-item>
 
-    <ion-item padding>
+    <ion-item padding id="item_ano">
       <ion-label id="lbl_ano">Ano de Conclusão:</ion-label>
       <ion-datetime (click)="RetornaAno()" displayFormat="YYYY" pickerFormat="YYYY" [min]="1960" [max]="ano" cancelText="Cancelar"
-        doneText="OK" formControlName="ano" (keyup)="Validacoes('ano')"(ionFocus)="Validacoes('ano')" (ionBlur)="Validacoes('ano')"></ion-datetime>
+        doneText="OK" formControlName="ano" (keyup)="Validacoes('ano')" (ionFocus)="Validacoes('ano')" (ionBlur)="Validacoes('ano')"></ion-datetime>
     </ion-item>
 
     <button ion-button (click)="goToPage4()" style="width: 100px; float:right; background-color: #FF7F50;">Próximo</button>

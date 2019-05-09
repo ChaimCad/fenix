@@ -54,8 +54,10 @@
   .item-input .label-ios, .item-select .label-ios, .item-datetime .label-ios{
     color: #999;
   }
-  ion-app.ios{
-    font-family: "Roboto", "Helvetica Neue",  sans-serif
+  ion-app.ios, ion-app.md{
+    font-family: "Roboto", "Helvetica Neue",  sans-serif;
   }
+  /*font-family: 'IBM Plex Sans', sans-serif;*/
+
   
 

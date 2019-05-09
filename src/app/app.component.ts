@@ -22,7 +22,7 @@ import { InfoAddPage } from '../pages/pags_curriculo/info-add/info-add';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Curriculo1Page;
+  rootPage:any = FormacaoPage;
 
   
 

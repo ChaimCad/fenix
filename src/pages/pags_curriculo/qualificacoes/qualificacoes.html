@@ -16,13 +16,13 @@
 
     <ion-item padding>
       <ion-label id="lbl_curso">Curso:</ion-label>
-      <ion-input type="text" formControlName="curso" (keyup)="Validacoes('curso')" (ionFocus)="Validacoes('curso')" (ionBlur)="Validacoes('curso')">
+      <ion-input type="text" formControlName="curso" [value] = "curso" (keyup)="Validacoes('curso')" (ionFocus)="Validacoes('curso')" (ionBlur)="Validacoes('curso')">
       </ion-input>
     </ion-item>
 
     <ion-item padding>
       <ion-label id="lbl_nome_instituicao">Instituição de ensino:</ion-label>
-      <ion-input type="text" formControlName="nome_instituicao" (keyup)="Validacoes('nome_instituicao')" (ionFocus)="Validacoes('nome_instituicao')" (ionBlur)="Validacoes('nome_instituicao')"></ion-input>
+      <ion-input type="text" [value] = "nome_instituicao" formControlName="nome_instituicao" (keyup)="Validacoes('nome_instituicao')" (ionFocus)="Validacoes('nome_instituicao')" (ionBlur)="Validacoes('nome_instituicao')"></ion-input>
     </ion-item>
 
     <ion-item padding>

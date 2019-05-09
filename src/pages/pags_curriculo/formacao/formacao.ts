@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AreaAtuacaoPage } from '../area-atuacao/area-atuacao';
 import { QualificacoesPage } from '../qualificacoes/qualificacoes';
 import { InfoAddPage } from '../info-add/info-add';
+import { VALID } from '@angular/forms/src/model';
 
 
 /**
@@ -22,6 +23,9 @@ export class FormacaoPage {
   ano: number;
   mes: number;
   data: string;
+
+  public nome_instituicao: string = '';
+  public data_ano:string = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
@@ -64,7 +68,13 @@ export class FormacaoPage {
       else if (!this.formulario.controls.escolaridade.valid || this.formulario.controls.escolaridade.touched)
         document.getElementById('lbl_' + name).style.color = '#f53d3d';
       if (this.formulario.value.escolaridade == 'Analfabeto(a)'){
-        this.navCtrl.push(InfoAddPage);
+        (<HTMLInputElement>document.getElementById('item_inst')).hidden = true;
+        (<HTMLInputElement>document.getElementById('item_ano')).hidden = true;
+      }
+      else
+      {
+        (<HTMLInputElement>document.getElementById('item_inst')).hidden = false;
+        (<HTMLInputElement>document.getElementById('item_ano')).hidden = false;
       }
     }
     if (name == 'nome_inst') {
@@ -74,8 +84,10 @@ export class FormacaoPage {
         document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
     if (name == 'ano') {
-      if (this.formulario.controls.ano.valid)
+      if (this.formulario.controls.ano.valid){
         document.getElementById('lbl_' + name).style.color = '#32db64';
+      }
+        
       else if (!this.formulario.controls.ano.valid || this.formulario.controls.ano.touched)
         document.getElementById('lbl_' + name).style.color = '#f53d3d';
     }
@@ -88,16 +100,50 @@ export class FormacaoPage {
   }
 
   goToPage4() {
-    if (this.formulario.status != "INVALID"){
+    if (this.formulario.value.escolaridade == 'Analfabeto(a)'){
       this.navCtrl.push(AreaAtuacaoPage);
     }
     else {
-      let alert = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: 'Preencha todos os campos corretamente.',
-        buttons: ['Ok']
-      });
-      alert.present();
+
+      if (this.formulario.value.escolaridade == "Ensino Técnico" || this.formulario.value.escolaridade == "Ensino Superior"){
+        if (this.formulario.status != "INVALID"){
+          this.navCtrl.push(AreaAtuacaoPage, {
+            param1: this.formulario.value.nome_inst,
+            param2: this.formulario.value.escolaridade
+          });
+        }
+        else {
+          let alert = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: 'Preencha todos os campos corretamente.',
+            buttons: ['Ok']
+          });
+          alert.present();
+        }
+      }
+      else if (this.formulario.status != "INVALID") {
+          this.navCtrl.push(AreaAtuacaoPage);
+        }
+      else {
+        let alert = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: 'Preencha todos os campos corretamente.',
+          buttons: ['Ok']
+        });
+        alert.present();
+      }
+      }
+      /*else{
+        let alert = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: 'Preencha todos os campos corretamente.',
+          buttons: ['Ok']
+        });
+        alert.present();
+      }*/
     }
+    
+
   }
-}
+
+

@@ -17,7 +17,14 @@ import { InfoAddPage } from '../info-add/info-add';
 })
 export class QualificacoesPage {
 
+  public nome_instituicao:string;
+  public curso:string;
+  public cor:boolean;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl:AlertController) {
+    this.nome_instituicao = this.navParams.get('param1');
+    this.curso = this.navParams.get('param2');
+    this.cor = this.navParams.get('param3');
   }
 
   ano: number;
@@ -103,6 +110,12 @@ export class QualificacoesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QualificacoesPage');
+    if (this.cor == true){
+      this.curso = this.formulario.value.curso;
+      this.nome_instituicao = this.formulario.value.nome_instituicao;
+      document.getElementById('lbl_nome_instituicao').style.color = '#32db64';
+      document.getElementById('lbl_curso').style.color = '#32db64';
+    }
   }
 
 }
