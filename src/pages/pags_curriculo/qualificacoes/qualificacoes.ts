@@ -38,11 +38,11 @@ export class QualificacoesPage {
   }
 
   public formulario: FormGroup = new FormGroup({
-    'curso': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(20), Validators.pattern('[A-Za-zÀ-ú]*')]),
-    'nome_instituicao': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'curso': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(20), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
+    'nome_instituicao': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
     'data_ano': new FormControl(null, [Validators.required]),
     'tipo_curso': new FormControl(null, [Validators.required]),
-    'desc': new FormControl(null, [Validators.required, Validators.maxLength(10), Validators.pattern('[A-Za-zÀ-ú]*')]),
+    'desc': new FormControl(null, [Validators.required, Validators.maxLength(10), Validators.pattern('[ A-Za-zÀ-ú ]*')]),
   })
 
   public tipo_curso: Array<string> = [

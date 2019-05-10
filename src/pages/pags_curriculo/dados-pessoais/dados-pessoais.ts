@@ -143,7 +143,6 @@ export class DadosPessoaisPage {
 
   goToPage2(){
     if (this.formulario_dadospessoais.status != "INVALID"){
-
       this.navCtrl.push(EnderecoPage);
     }
     else
