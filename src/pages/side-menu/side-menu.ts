@@ -28,4 +28,8 @@ export class SideMenuPage {
     this.navCtrl.setRoot(InicioPage);
   }
 
+  goToHotsite(){
+    window.open("https://fenixcurriculos.azurewebsites.net",'_system', 'location=yes');
+  }
+
 }
