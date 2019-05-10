@@ -1,0 +1,51 @@
+.loading-md .spinner-crescent circle {
+    stroke: orangered;
+}
+
+.infinite-loading-spinner .spinner-crescent circle {
+    stroke: orangered;
+  }
+
+  .loading-ios .spinner-crescent circle {
+    stroke: orangered;
+  }
+  .loading-md .spinner-crescent circle {
+    stroke: orangered;
+  }
+  .loading-wp .spinner-crescent circle {
+    stroke: orangered;
+  }
+  
+  ion-app.ios [padding] .scroll-content {
+    padding: 0;
+  }
+
+page-intro {
+
+    .container{
+        width: 90vw;
+        height: 80vh;
+        background: #ffffff;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto 0 auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .img{
+        width: 34.6vw;
+        height: 70.92vh;
+        background: #ffffff
+    }
+
+    @media screen and (max-width: 600px){
+        .img{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
+    }
+
+}

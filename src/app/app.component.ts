@@ -16,12 +16,15 @@ import { AreaAtuacaoPage } from '../pages/pags_curriculo/area-atuacao/area-atuac
 import { QualificacoesPage } from '../pages/pags_curriculo/qualificacoes/qualificacoes';
 import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
 import { InfoAddPage } from '../pages/pags_curriculo/info-add/info-add';
+import { CurriculoPage } from '../pages/curriculo/curriculo';
+import { IntroPage } from '../pages/intro/intro';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = AreaAtuacaoPage;
+  //rootPage:any = AreaAtuacaoPage;
+  rootPage:any = IntroPage;
 
   
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

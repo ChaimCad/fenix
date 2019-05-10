@@ -1,0 +1,43 @@
+<ion-menu side="left" [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+    </ion-header>
+    <ion-content class="menu_bar">
+  
+      <ion-list>
+  
+        <div class="container_perfil">
+  
+          <img class="img_user" src="../assets/imgs/perfil.png">
+          <label class="ion_item" ion-item>usuario ricardo da silva</label>
+          <label class="ion_item" ion-item>usuario@gmail.com</label>
+  
+        </div>
+  
+      </ion-list>
+      <div class="continer_abas">
+      <ion-list>
+        <button class="ion_item" ion-item >
+          Alterar Dados
+        </button>
+        <button class="ion_item" ion-item>
+          Ajuda
+        </button>
+        <button class="ion_item" ion-item>
+          Sobre
+        </button>
+        <button class="ion_item" ion-item (click)="goToInicioPage()" >
+          Sair
+        </button>
+      </ion-list>
+      </div>
+      
+    </ion-content>
+  </ion-menu>
+  
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+ 
+  

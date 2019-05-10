@@ -25,6 +25,11 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { EnderecoPageModule } from '../pages/pags_curriculo/endereco/endereco.module';
 import { HttpModule } from '@angular/http';
 
+import { IntroPageModule } from '../pages/intro/intro.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { InicioPageModule } from '../pages/inicio/inicio.module';
+import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
+import { SideMenuPageModule } from '../pages/side-menu/side-menu.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,12 @@ import { HttpModule } from '@angular/http';
     QualificacoesPageModule,
     ReactiveFormsModule,
     EnderecoPageModule,
-    HttpModule
+    HttpModule,
+    IntroPageModule,
+    LoginPageModule,
+    InicioPageModule,
+    CadastroPageModule,
+    SideMenuPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
