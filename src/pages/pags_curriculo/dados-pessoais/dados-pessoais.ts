@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EnderecoPage } from '../endereco/endereco';
 import { AlertController } from 'ionic-angular';
+import { Curriculo } from '../../../app/models/curriculo/curriculo.model';
 
 /**
  * Generated class for the DadosPessoaisPage page.
@@ -19,6 +20,24 @@ import { AlertController } from 'ionic-angular';
 export class DadosPessoaisPage {
 
   public data:any; mes:any; ano:number; min_idade:string; max_idade:string;
+
+  curriculo: Curriculo = {
+
+    pessoal:{
+      nome: '',
+      sobrenome: '',
+      sexo: '',
+      telefone: '',
+      celular: '',
+      estadoCivil: '',
+      filhos:'',
+      dataNascimento:'',
+      paisOrigem: '',
+      historia: '',
+
+    }
+
+  }
 
   public RetornaDataAtual(){
     var dNow = new Date();
@@ -144,7 +163,7 @@ export class DadosPessoaisPage {
   goToPage2(){
     if (this.formulario_dadospessoais.status != "INVALID"){
 
-      this.navCtrl.push(EnderecoPage);
+       this.navCtrl.push(EnderecoPage);
     }
     else
     {

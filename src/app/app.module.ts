@@ -31,6 +31,10 @@ import { InicioPageModule } from '../pages/inicio/inicio.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
 import { SideMenuPageModule } from '../pages/side-menu/side-menu.module';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FIREBASE_CONFIG } from './firebase.credentials';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -60,7 +64,9 @@ import { SideMenuPageModule } from '../pages/side-menu/side-menu.module';
     LoginPageModule,
     InicioPageModule,
     CadastroPageModule,
-    SideMenuPageModule
+    SideMenuPageModule,
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
