@@ -56,7 +56,7 @@
 </ion-item>
 
 <ion-item padding>
-    <ion-label id="lbl_filhos">Filhos:</ion-label>
+    <ion-label id="lbl_filhos">Número de filhos:</ion-label>
       <ion-select cancelText="Cancelar" formControlName="filhos" (ionFocus)="Valida('filhos')" (ionBlur)="Valida('filhos')">
         <ion-option *ngFor="let filhos of filho" >{{filhos}}</ion-option>
       </ion-select>
