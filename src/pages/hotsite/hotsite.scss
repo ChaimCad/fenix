@@ -42,7 +42,8 @@ page-hotsite {
         -webkit-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
         -moz-box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
         box-shadow: 11px 8px 11px -4px rgba(150,150,150,0.8);
-        background-color: #db581c;
+        //background-color: #b98e00;
+        background-color: #b17e0f;
         color: #f5fbef;
     }
 
@@ -65,7 +66,8 @@ page-hotsite {
         height: calc(1.1 * 100vh);
         width: calc(1 * 100vw);
         color: #f5fbef;
-        background-color: #011627;
+        background-color: #090014;
+        background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%239C92AC' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -319,8 +321,6 @@ ion-navbar.toolbar {
 
     .apresenta_motivo{
         background-color: #564d65;
-        padding: calc(0.128 * 100vw) calc(0.14 * 100vw);
-        
         background-image: url("../../assets/imgs/motivo1.png");
         background-position: center center;
         background-size: cover;
@@ -383,7 +383,7 @@ ion-navbar.toolbar {
     .apresentacao{
         margin-top: 1.5em;
         padding: calc(0.1 * 100vh) calc(0.05 * 100vw);
-        background-color: #db581c;
+        background-color: #b17e0f;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -410,7 +410,8 @@ ion-navbar.toolbar {
         height: calc(4.45 * 100vw);
         width: calc(1 * 100vw);
         color: #f5fbef;
-        background-color: #011627;
+        background-color: #090014;
+        background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%239C92AC' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
         display: flex;
         justify-content: center;
         align-items: center;
