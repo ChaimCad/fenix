@@ -10,18 +10,18 @@
         <div id="linguagem">
             <ion-list>
                 <ion-item>
-                  <ion-label id="textoLingua">Linguagem</ion-label>
+                  <ion-label id="textoLingua">{{'HOTSITE.idioma' | translate}}</ion-label>
                   <ion-select [(ngModel)]="lingua">
-                    <ion-option value="pt">Português</ion-option>
-                    <ion-option value="eng">Inglês</ion-option>
-                    <ion-option value="fra">Francês</ion-option>
-                    <ion-option value="esp">Espanhol</ion-option>
+                    <ion-option value="pt">{{ 'HOTSITE.portugues' | translate}}</ion-option>
+                    <ion-option value="eng">{{ 'HOTSITE.ingles' | translate}}</ion-option>
+                    <ion-option value="fra">{{ 'HOTSITE.espanhol' | translate}}</ion-option>
+                    <ion-option value="esp">{{ 'HOTSITE.frances' | translate}}</ion-option>
                   </ion-select>
                 </ion-item>
               </ion-list>
         </div>
           <a href="#"><img id="headLogo" src="../../assets/imgs/logol.png"></a>
-          <a href="#"><button id="headLogin">Entrar</button>
+          <a href="#"><button id="headLogin">{{'HOTSITE.entrar' | translate}} </button>
           </a>
         </ion-title>
   </ion-navbar>
@@ -31,22 +31,22 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
     <section class="cabecalho">
         <h1>Fênix</h1>
-        <h3>Porque você também pode renascer.</h3>
+        <h3>{{'HOTSITE.subtitulo' | translate}}</h3>
     </section>
     <section class="apresentacao">
-        <h1>Para quem o Fênix foi feito?</h1>
-        <h2>Nosso sistema baseia-se no auxílio daqueles que se encontram à margem da sociedade, na busca por novas experiências no mercado de trabalho a partir do cadastro de seus currículos. Abrindo um novo leque de oportunidades para sua vida.</h2>
+        <h1>{{'HOTSITE.quem_s' | translate}}</h1>
+        <h2>{{'HOTSITE.quem_s1' | translate}}</h2>
     </section>
     <section class="motivos">
         <div class="apresenta_motivo"></div>
-        <div class="motivo1hide"><h1>FAÇA SEU CURRICULUM DE GRAÇA E FACILMENTE</h1>
-          <p>Aqui você pode montar seu currículo, tanto no computador quanto no celular, sem preconceitos para sua contratação.</p></div>
+        <div class="motivo1hide"><h1>{{'HOTSITE.faca' | translate}}</h1>
+          <p>{{'HOTSITE.faca_t' | translate}}</p></div>
         <div class="apresenta_motivo2"></div>
-        <div class="motivo2hide"><h1>>FALE DIRETAMENTE COM SEUS CONTRATADORES</h1>
-          <p>Facilitamos para que contratadores o encontrem facilmente se você estiver interessado em ingressar no mercado de trabalho.</p></div>
+        <div class="motivo2hide"><h1>{{ 'HOTSITE.fale' | translate}} </h1>
+          <p>{{'HOTSITE.fale_t' | translate }} </p></div>
         <div class="apresenta_motivo3"></div>
-        <div class="motivo3hide"><h1>CONECTE-SE DE QUALQUER LUGAR</h1>
-          <p>Plataforma disponível em diversos idiomas, para maior integração entre empresas e quem procura emprego ao redor do mundo, assim quebrando barreiras e permitindo que qualquer um possa ser contratado.</p></div>
+        <div class="motivo3hide"><h1>{{'HOTSITE.conect' | translate}}</h1>
+          <p>{{'HOTSITE.conect_t' | translate }}</p></div>
         <div class="motivo1"><h1>FAÇA SEU CURRICULUM DE GRAÇA E FACILMENTE</h1>
                              <p>Aqui você pode montar seu currículo, tanto no computador quanto no celular, sem preconceitos para sua contratação.</p></div>
         <div class="motivo2"><h1>FALE DIRETAMENTE COM SEUS CONTRATADORES</h1>

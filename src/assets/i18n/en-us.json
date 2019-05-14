@@ -1,0 +1,42 @@
+{
+    "HOTSITE":
+    {
+        "idioma": "language",
+        "portugues": "Portuguese",
+        "ingles": "English",
+        "espanhol": "Spanish",
+        "frances": "French",
+        "entrar":"login",
+        "subtitulo":"Because you too can be reborn.",
+        "quem_s":"For whom was the Fênix made?",
+        "quem_s1": "Our system is based on the help of those who are on the margins of society, in the search for new experiences in the labor market from the register of their curricula. Opening a new range of opportunities for your life.",
+        "faca":"MAKE YOUR CURRICULUM FOR FREE AND EASILY",
+        "faca_t":"Here you can set up your resume, both on the computer and on the cell phone, without any preconceptions for your hiring.",
+        "fale":"SPEAK DIRECTLY WITH YOUR CONTRACTORS",
+        "fale_t":"We make it easy for contractors to find you easily if you are interested in joining the job market.",
+        "conect":"CONNECT ANYWHERE",
+        "conect_t":"Platform available in several languages, enabling greater integration between companies and stakeholders around the world, thus breaking down barriers and allowing anyone to be hired.",
+        "direitos2": "Download the app for",
+        "direitos1": "All rights reserved Harpa Ltda.",
+        "ou": "or",
+        "sobrea": "about",
+        "privacidade":"privacy",
+        "Termos":"terms"
+
+    },
+
+    "LOGIN":
+    {
+
+    },
+     
+    "CADASTRO":
+    {
+
+    },
+    "CADASTRO_CURRI":
+    {
+
+    }
+
+}

@@ -1,0 +1,41 @@
+{
+    "HOTSITE":
+    {
+        "idioma": "Linguagem",
+        "portugues": "Português",
+        "ingles": "Inglês",
+        "espanhol": "Espanhol",
+        "frances": "Francês",
+        "entrar":"entrar",
+        "subtitulo":"Porque você também pode renascer.",
+        "quem_s":"Para quem o Fênix foi feito?",
+        "quem_s1": "Nosso sistema baseia-se no auxílio daqueles que se encontram à margem da sociedade, na busca por novas experiências no mercado de trabalho a partir do cadastro de seus currículos. Abrindo um novo leque de oportunidades para sua vida.",
+        "faca":"FAÇA SEU CURRICULUM DE GRAÇA E FACILMENTE",
+        "faca_t":"Aqui você pode montar seu currículo, tanto no computador quanto no celular, sem preconceitos para sua contratação.",
+        "fale":"FALE DIRETAMENTE COM SEUS CONTRATADORES",
+        "fale_t":"Facilitamos para que contratadores o encontrem facilmente se você estiver interessado em ingressar no mercado de trabalho. ",
+        "conect":"CONECTE-SE DE QUALQUER LUGAR",
+        "conect_t":"Plataforma disponível em diversos idiomas, possibillitando maior integração entre empresas e interessados ao redor do mundo, assim quebrando barreiras e permitindo a qualquer um ser contratado.",
+        "direitos2": "Fazer o download do aplicativo para",
+        "direitos1": "Todos os direitos reservados Harpa Ltda.",
+        "ou": "ou",
+        "sobrea": "sobre",
+        "privacidade":"privacidade",
+        "Termos":"termos"
+
+    },
+
+    "LOGIN":
+    {
+
+    },
+     
+    "CADASTRO":
+    {
+        
+    },
+    "CADASTRO_CURRI":
+    {
+
+    }
+}

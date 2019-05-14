@@ -1,0 +1,41 @@
+{
+    "HOTSITE":
+    {
+        "idioma": "langue",
+        "portugues": "Accueil",
+        "ingles": "Anglais",
+        "espanhol": "Espagnol",
+        "frances": "Le français",
+        "entrar":"s'identifier",
+        "subtitulo":"Parce que vous aussi pouvez renaître.",
+        "quem_s":"Pour qui le Fênix a-t-il été fabriqué?",
+        "quem_s1": "Notre système est basé sur l'aide de ceux qui sont en marge de la société, dans la recherche de nouvelles expériences sur le marché du travail à partir du registre de leurs programmes. Ouvrir une nouvelle gamme d'opportunités pour votre vie.",
+        "faca":"FAITES VOTRE CURRICULUM GRATUITEMENT ET FACILEMENT",
+        "faca_t":"Ici, vous pouvez configurer votre CV, à la fois sur l'ordinateur et sur le téléphone portable, sans aucune idée préconçue pour votre embauche.",
+        "fale":"PARLER DIRECTEMENT AVEC VOS ENTREPRENEURS",
+        "fale_t":"Nous facilitons la tâche des entrepreneurs pour vous trouver facilement si vous souhaitez intégrer le marché du travail.",
+        "conect":"CONNECTER PARTOUT",
+        "conect_t":"Plateforme disponible en plusieurs langues, permettant une plus grande intégration entre les entreprises et les parties prenantes du monde entier, supprimant ainsi les obstacles et permettant à quiconque d'être embauché",
+        "direitos2": "Téléchargez l'application pour",
+        "direitos1": "Tous les droits sont réservés Harpa Ltda.",
+        "ou": "ou",
+        "sobrea": "sur",
+        "privacidade":"intimité",
+        "Termos":"termes"
+
+    },
+
+    "LOGIN":
+    {
+
+    },
+     
+    "CADASTRO":
+    {
+        
+    },
+    "CADASTRO_CURRI":
+    {
+
+    }
+}
