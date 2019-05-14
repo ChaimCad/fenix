@@ -7,6 +7,19 @@
 <ion-header>
   <ion-navbar>
       <ion-title>
+        <div id="linguagem">
+            <ion-list>
+                <ion-item>
+                  <ion-label id="textoLingua">Linguagem</ion-label>
+                  <ion-select [(ngModel)]="lingua">
+                    <ion-option value="pt">Português</ion-option>
+                    <ion-option value="eng">Inglês</ion-option>
+                    <ion-option value="fra">Francês</ion-option>
+                    <ion-option value="esp">Espanhol</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </div>
           <a href="#"><img id="headLogo" src="../../assets/imgs/logol.png"></a>
           <a href="#"><button id="headLogin">Entrar</button>
           </a>
@@ -58,5 +71,4 @@
       <div id="rodapeBotText4"><a id="rodapeBotA" href="#">Termos</a>
       </div>
     </div>
-
 </ion-content>

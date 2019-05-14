@@ -12,6 +12,22 @@
   
 
 page-hotsite {
+    #linguagem{
+        width: 13%;
+        position: fixed;
+        margin: auto 0 auto 0;
+    }
+
+    #textoLingua{
+
+        font-size: 1.3vw;
+    }
+
+    .list-md {
+        margin: 12px 0 1px;
+      }
+      
+
     .cabecalho {
         background-image: url("../../assets/imgs/fenix.png");
         background-position: center center;
@@ -326,6 +342,21 @@ ion-navbar.toolbar {
         background-size: cover;
     }
 
+    #linguagem{
+        width: 22%;
+        position: fixed;
+        margin: auto 0 auto 0;
+    }
+
+    .list-md {
+        margin: -1px 0 16px;
+      }
+
+    #textoLingua{
+
+        font-size: 2vw;
+    }
+
     .apresenta_motivo2{
         background-color: #605474;
         padding: calc(0.2 * 100vh) calc(0.14 * 100vw);
@@ -512,6 +543,23 @@ ion-navbar.toolbar {
         font-size: calc(0.045* 100vw);
         text-align: justify;
     }
+
+    .list-md {
+        margin: -1px 0 16px;
+      }
+
+    #linguagem{
+        width: 100%;
+        position: relative;
+        padding: auto 0 auto 0;
+        cursor: pointer;
+    }
+
+    #textoLingua{
+        font-size: 3vw;
+    }
+
+
   }
    
 }
