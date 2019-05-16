@@ -15,13 +15,13 @@ import { Title } from '@angular/platform-browser';
   selector: 'page-hotsite',
   templateUrl: 'hotsite.html',
 })
+
 export class HotsitePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private titleService: Title) {
   }
 
   ionViewDidLoad() {
-    this.titleService.setTitle('Fenix');
+    
+    }
   }
-
-}

@@ -13,15 +13,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HotsitePage } from '../pages/hotsite/hotsite';
 import { HotsitePageModule } from '../pages/hotsite/hotsite.module';
 
-import {TranslateModule, TranslateLoader, TranslateService} from "@ngx-translate/core";
-import {TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { TranslateModule, TranslateLoader, TranslateService } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export function createTranslateLoader(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/','.json');
 }
 
-export const default_language = 'es-es';
+export const default_language = 'pt-br';
 
 @NgModule({
   declarations: [
