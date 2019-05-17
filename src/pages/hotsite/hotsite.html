@@ -8,17 +8,24 @@
   <ion-navbar>
       <ion-title>
         <div id="linguagem">
-            <ion-list>
+            
                 <ion-item>
                   <ion-label id="textoLingua">{{'HOTSITE.idioma' | translate}}</ion-label>
-                  <ion-select [(ngModel)]="lingua">
-                    <ion-option value="pt-br">{{ 'HOTSITE.portugues' | translate}}</ion-option>
-                    <ion-option value="en-us">{{ 'HOTSITE.ingles' | translate}}</ion-option>
-                    <ion-option value="es-es">{{ 'HOTSITE.espanhol' | translate}}</ion-option>
-                    <ion-option value="fr-fr">{{ 'HOTSITE.frances' | translate}}</ion-option>
+                  <ion-select cancelText="Cancelar" (ionChange)="translate1()" [(ngModel)]="linguagem" >
+                    <ion-option>{{ 'HOTSITE.portugues' | translate }}</ion-option>
+                    <ion-option>{{ 'HOTSITE.ingles' | translate }}</ion-option>
+                    <ion-option>{{ 'HOTSITE.espanhol' | translate }}</ion-option>
+                    <ion-option>{{ 'HOTSITE.frances' | translate }}</ion-option>
+                    <!--<ion-option *ngFor="let lingua of language">{{lingua}}</ion-option>-->
                   </ion-select>
+                  <!--<ion-select [(ngModel)]="lingua">
+                    <ion-option>{{ 'HOTSITE.portugues' | translate}}</ion-option>
+                    <ion-option>{{ 'HOTSITE.ingles' | translate}}</ion-option>
+                    <ion-option>{{ 'HOTSITE.espanhol' | translate}}</ion-option>
+                    <ion-option>{{ 'HOTSITE.frances' | translate}}</ion-option>
+                  </ion-select>-->
                 </ion-item>
-              </ion-list>
+               
         </div>
           <a href="#"><img id="headLogo" src="../../assets/imgs/logol.png"></a>
           <a href="#"><button id="headLogin">{{'HOTSITE.entrar' | translate}} </button>

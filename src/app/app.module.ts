@@ -21,7 +21,9 @@ export function createTranslateLoader(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/','.json');
 }
 
-export const default_language = 'pt-br';
+export class a {
+ public static default_language = 'pt-br';
+} 
 
 @NgModule({
   declarations: [
@@ -63,8 +65,8 @@ export class AppModule {
 
   constructor(platform: Platform, translate: TranslateService)
   {
-    translate.setDefaultLang(default_language);
-    let browserLanguage = translate.getBrowserLang() || default_language;
+    translate.setDefaultLang(a.default_language);
+    let browserLanguage = translate.getBrowserLang() || a.default_language;
     //alert(browserLanguage);
     translate.use(browserLanguage.toLowerCase());
   }
