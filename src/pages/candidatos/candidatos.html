@@ -1,0 +1,104 @@
+<!--
+  Generated template for the CandidatosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>candidatos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+      <ion-list>
+          <ion-item padding>
+              <ion-input type="text" placeholder="Área de atuação"></ion-input>
+            </ion-item>
+          <ion-item padding>
+              <ion-input type="text" placeholder="Área de interesse"></ion-input>
+           </ion-item>
+           <ion-item padding>
+            <ion-label id="lbl_sexo">Sexo:</ion-label>
+              <ion-select cancelText="Cancelar" >
+                <ion-option *ngFor="let sexos of sexo" [value]="sexos">{{sexos}}</ion-option>
+              </ion-select>
+          </ion-item>
+            <ion-item padding>
+              <ion-label id="lbl_escolaridade">Escolaridade:</ion-label>
+              <ion-select cancelText="Cancelar">
+                <ion-option *ngFor="let escola of escolaridade" [value]="escola">{{escola}}</ion-option>
+              </ion-select>
+            </ion-item>
+          <ion-item padding>
+            <ion-input class="inputIdade" type="number" placeholder="Idade" maxlength="3"></ion-input>
+         </ion-item>
+        </ion-list>
+    <input class="searchbar-input" dir="auto" placeholder="Pesquisar" type="search" autocomplete="off" autocorrect="off" spellcheck="false">
+<ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/perfil.png">
+      </ion-avatar>
+      <h2>Káàh Nabees</h2>
+      <p>6 de Junho de 1996</p>
+    </ion-item>
+  
+    <ion-card-content>
+      <h2>Diferenciais:</h2>
+      <li>Trabalhou em Odebrestch</li>
+      <li>Trabalho em equipe</li>
+      <li>Hora extra não remunerada</li>
+    </ion-card-content>
+    <ion-card-content>
+      <h2>Ocupações:</h2>
+      <li>Programadora</li>
+      <li>Traficante</li>
+      <li>Youtuber</li>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="clipboard"></ion-icon>
+          <div>Ver currículo</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+  <ion-card>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/user1.jpg">
+        </ion-avatar>
+        <h2>Káàh Nabees</h2>
+        <p>6 de Junho de 1996</p>
+      </ion-item>
+    
+      <ion-card-content>
+        <h2>Diferenciais:</h2>
+        <li>Trabalhou em Odebrestch</li>
+        <li>Trabalho em equipe</li>
+        <li>Hora extra não remunerada</li>
+      </ion-card-content>
+      <ion-card-content>
+        <h2>Ocupações:</h2>
+        <li>Programadora</li>
+        <li>Traficante</li>
+        <li>Youtuber</li>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="clipboard"></ion-icon>
+            <div>Ver currículo</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
+</ion-content>

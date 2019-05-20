@@ -18,13 +18,14 @@ import { FormacaoPage } from '../pages/pags_curriculo/formacao/formacao';
 import { InfoAddPage } from '../pages/pags_curriculo/info-add/info-add';
 import { CurriculoPage } from '../pages/curriculo/curriculo';
 import { IntroPage } from '../pages/intro/intro';
+import { CandidatosPage } from '../pages/candidatos/candidatos';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   //rootPage:any = AreaAtuacaoPage;
-  rootPage:any = IntroPage;
+  rootPage:any = CandidatosPage;
 
   
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

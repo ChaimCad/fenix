@@ -27,10 +27,10 @@
     <ion-input type="text" formControlName="sobrenome" (keyup)="Valida('sobrenome')" (ionFocus)="Valida('sobrenome')" (ngchange)="Valida('sobrenome')" ></ion-input>
 </ion-item>
 <ion-item padding class = "teste">
-    <ion-label id="lbl_sexo">Sexo:</ion-label>
-      <ion-select cancelText="Cancelar"  (ionFocus)="Valida('sexo')" (ionBlur)="Valida('sexo')" formControlName="sexo">
-        <ion-option *ngFor="let sexos of sexo" >{{sexos}}</ion-option>
-      </ion-select>
+  <ion-label id="lbl_sexo">Sexo:</ion-label>
+  <ion-select cancelText="Cancelar" (ionFocus)="Valida('sexo')" (ionBlur)="Valida('sexo')" formControlName="sexo">
+    <ion-option *ngFor="let sexos of sexo" >{{sexos}}</ion-option>
+  </ion-select>
 </ion-item>
 
 <ion-item padding>

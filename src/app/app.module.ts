@@ -30,6 +30,8 @@ import { LoginPageModule } from '../pages/login/login.module';
 import { InicioPageModule } from '../pages/inicio/inicio.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
 import { SideMenuPageModule } from '../pages/side-menu/side-menu.module';
+import { CandidatosPageModule } from '../pages/candidatos/candidatos.module';
+import { CandidatosPage } from '../pages/candidatos/candidatos';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,8 @@ import { SideMenuPageModule } from '../pages/side-menu/side-menu.module';
     LoginPageModule,
     InicioPageModule,
     CadastroPageModule,
-    SideMenuPageModule
+    SideMenuPageModule,
+    CandidatosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
