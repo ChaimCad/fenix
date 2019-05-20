@@ -11,32 +11,42 @@
 </ion-header>
 
 <ion-content padding>
-      <ion-list>
-          <ion-item padding>
-              <ion-input type="text" placeholder="Área de atuação"></ion-input>
-            </ion-item>
-          <ion-item padding>
-              <ion-input type="text" placeholder="Área de interesse"></ion-input>
-           </ion-item>
-           <ion-item padding>
-            <ion-label id="lbl_sexo">Sexo:</ion-label>
-              <ion-select cancelText="Cancelar" >
-                <ion-option *ngFor="let sexos of sexo" [value]="sexos">{{sexos}}</ion-option>
-              </ion-select>
-          </ion-item>
-            <ion-item padding>
-              <ion-label id="lbl_escolaridade">Escolaridade:</ion-label>
-              <ion-select cancelText="Cancelar">
-                <ion-option *ngFor="let escola of escolaridade" [value]="escola">{{escola}}</ion-option>
-              </ion-select>
-            </ion-item>
-          <ion-item padding>
-            <ion-input class="inputIdade" type="number" placeholder="Idade" maxlength="3"></ion-input>
-         </ion-item>
-        </ion-list>
-    <input class="searchbar-input" dir="auto" placeholder="Pesquisar" type="search" autocomplete="off" autocorrect="off" spellcheck="false">
-<ion-card>
-
+  <section id="filter">
+    <form class="formFilter">
+    <ion-list [formGroup]="formulario_candidatos" class="listFilter">
+      <ion-item padding>
+        <ion-label id="lbl_area_atuacao">Área de atuação:</ion-label>
+        <ion-select cancelText="Cancelar" (focus)="Valida('areaA')" (blur)="Valida('areaA')">
+          <ion-option *ngFor="let areaAt of areaA" [value]="areaA">{{areaAt}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item padding>
+        <ion-label id="lbl_area_interesse">Área de interesse:</ion-label>
+        <ion-select cancelText="Cancelar" (focus)="Valida('areaI')" (blur)="Valida('areaI')">
+          <ion-option *ngFor="let areaIn of areaI" [value]="areaI">{{areaIn}}</ion-option>
+        </ion-select>
+      </ion-item>
+        <ion-item padding>
+        <ion-label id="lbl_sexo">Sexo:</ion-label>
+          <ion-select cancelText="Cancelar">
+            <ion-option *ngFor="let sexos of sexo" [value]="sexos">{{sexos}}</ion-option>
+          </ion-select>
+      </ion-item>
+        <ion-item padding>
+          <ion-label id="lbl_escolaridade">Escolaridade:</ion-label>
+          <ion-select cancelText="Cancelar" (focus)="Valida('escola')" (blur)="Valida('escola')">
+            <ion-option *ngFor="let escola of escolaridade" [value]="escola">{{escola}}</ion-option>
+          </ion-select>
+        </ion-item>
+      <ion-item padding>
+        <ion-label id="lbl_idade">Idade:</ion-label>
+        <ion-input class="inputIdade" type="number" formControlName="idade" (keyup)="Valida('idade')" (blur)="Valida('idade')"></ion-input>
+      </ion-item>
+    </ion-list>
+    </form>
+  </section>
+  <input class="searchbar-input" dir="auto" placeholder="Pesquisa por nome" type="search" autocomplete="off" autocorrect="off" spellcheck="false">
+  <ion-card>
     <ion-item>
       <ion-avatar item-start>
         <img src="../../assets/imgs/perfil.png">
@@ -44,7 +54,6 @@
       <h2>Káàh Nabees</h2>
       <p>6 de Junho de 1996</p>
     </ion-item>
-  
     <ion-card-content>
       <h2>Diferenciais:</h2>
       <li>Trabalhou em Odebrestch</li>
@@ -57,7 +66,6 @@
       <li>Traficante</li>
       <li>Youtuber</li>
     </ion-card-content>
-  
     <ion-row>
       <ion-col>
         <button ion-button icon-start clear small>
@@ -66,18 +74,15 @@
         </button>
       </ion-col>
     </ion-row>
-  
   </ion-card>
   <ion-card>
-
       <ion-item>
         <ion-avatar item-start>
           <img src="../../assets/imgs/user1.jpg">
         </ion-avatar>
-        <h2>Káàh Nabees</h2>
+        <h2>~Julia Gomes</h2>
         <p>6 de Junho de 1996</p>
       </ion-item>
-    
       <ion-card-content>
         <h2>Diferenciais:</h2>
         <li>Trabalhou em Odebrestch</li>
@@ -90,7 +95,6 @@
         <li>Traficante</li>
         <li>Youtuber</li>
       </ion-card-content>
-    
       <ion-row>
         <ion-col>
           <button ion-button icon-start clear small>
@@ -99,6 +103,5 @@
           </button>
         </ion-col>
       </ion-row>
-    
     </ion-card>
 </ion-content>

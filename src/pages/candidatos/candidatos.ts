@@ -37,6 +37,31 @@ export class CandidatosPage {
     'Ensino Médio Completo',
     'Ensino Técnico',
     'Ensino Superior'
-  ]
+  ];
+
+  public areaA: Array<string> = [
+    'Informática',
+    'Administração',
+    'Recursos humanos',
+  ];
+
+  public areaI: Array<string> = [
+    'Informática',
+    'Administração',
+    'Recursos humanos',
+  ];
   
+  public formulario_candidatos: FormGroup = new FormGroup({
+    'idade' : new FormControl(null, [Validators.max(90), Validators.pattern('[0-9]')])
+  });
+
+  public Valida(name:string) {
+    if (name == 'idade') {
+      if (this.formulario_candidatos.controls.idade.valid)
+        document.getElementById('lbl_'+ name).style.color='#32db64';
+      else if (!this.formulario_candidatos.controls.idade.valid || this.formulario_candidatos.controls.idade.touched) {
+        document.getElementById('lbl_'+ name).style.color='#f53d3d';
+      }
+    }
+  }
 }
