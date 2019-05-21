@@ -2,8 +2,8 @@
 page-candidatos .formFilter {
     position: -webkit-fixed;
     position: fixed;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
   
   page-candidatos .listFilter {
@@ -38,13 +38,47 @@ page-candidatos {
     }
 
     #filter{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        z-index: 10;
-        position: absolute;
         border-radius: calc(0.008 * 100vw);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 15;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: none;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        contain: strict;
+        opacity: 0;
+    }
+
+    #botaofiltro{
+       position: absolute; 
+       z-index: 16;
+       font-size: 1vw;
+       width: calc(0.08 * 100vw);
+       margin: 10px;
+       padding: calc(1vw);
+       left: calc(0.9 * 100vw);
+       top: calc(0.01 * 100vh);
+    }
+
+    #esmaecer{
+       width: 100%;
+       height: 100%;
+       z-index: 0;
+       background-color: black;
+       opacity: 0.5;
+       position: absolute;
+       display: none;
     }
 }
