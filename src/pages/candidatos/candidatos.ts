@@ -24,16 +24,10 @@ export class CandidatosPage {
     document.getElementById('botaofiltro').addEventListener('click', function() {
       if(x == 0) {
         document.getElementById("filter").style.display = "flex";
-        for (let op = 0; op <= 1; op += 0.1) {
-            setTimeout(function() {
-              document.getElementById("filter").style.opacity = String(op);
-            }, 100);
-        }
         x = 1;
       }
       else {
         document.getElementById("filter").style.display = "none";
-        document.getElementById("filter").style.opacity = "0";
         x = 0;
       }
     });

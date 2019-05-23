@@ -15,33 +15,29 @@
 <ion-content padding>
   <section id="filter">
     <form class="formFilter">
-    <ion-list [formGroup]="formulario_candidatos" class="listFilter">
+    <ion-list [formGroup]="formulario_candidatos">
       <ion-item padding>
         <ion-label id="lbl_area_atuacao">Área de atuação:</ion-label>
-        <ion-select cancelText="Cancelar">
-          <ion-option *ngFor="let areaAt of areaA" [value]="areaAt">{{areaAt}}</ion-option>
-          <ion-option [selected]="true">Não filtrar</ion-option>
+        <ion-select cancelText="Cancelar" multiple="true">
+          <ion-option *ngFor="let areaAt of areaA" [value]="areaAt" >{{areaAt}}</ion-option>
         </ion-select>
       </ion-item>
       <ion-item padding>
         <ion-label id="lbl_area_interesse">Área de interesse:</ion-label>
-        <ion-select cancelText="Cancelar">
+        <ion-select cancelText="Cancelar" multiple="true">
           <ion-option *ngFor="let areaIn of areaI" [value]="areaIn">{{areaIn}}</ion-option>
-          <ion-option [selected]="true">Não filtrar</ion-option>
         </ion-select>
       </ion-item>
         <ion-item padding>
         <ion-label id="lbl_sexo">Sexo:</ion-label>
-          <ion-select cancelText="Cancelar">
+          <ion-select cancelText="Cancelar" multiple="true">
             <ion-option *ngFor="let sexos of sexo" [value]="sexos">{{sexos}}</ion-option>
-            <ion-option [selected]="true">Não filtrar</ion-option>
           </ion-select>
       </ion-item>
         <ion-item padding>
           <ion-label id="lbl_escolaridade">Escolaridade:</ion-label>
-          <ion-select cancelText="Cancelar" (focus)="Valida('escola')" (blur)="Valida('escola')">
+          <ion-select cancelText="Cancelar" (focus)="Valida('escola')" (blur)="Valida('escola')" multiple="true">
             <ion-option *ngFor="let escola of escolaridade" [value]="escola">{{escola}}</ion-option>
-            <ion-option [selected]="true">Não filtrar</ion-option>
           </ion-select>
         </ion-item>
       <ion-item padding>
@@ -51,8 +47,9 @@
     </ion-list>
     </form>
   </section>
+  <button ion-button color="light" id="botaofiltro">Filtros</button>
+  <ion-icon name="options"></ion-icon>
   <input class="searchbar-input" dir="auto" placeholder="Pesquisa por nome" type="search" autocomplete="off" autocorrect="off" spellcheck="false">
-  <button ion-button color="dark" id="botaofiltro">Filtros</button>
   <ion-card>
     <ion-item>
       <ion-avatar item-start>
