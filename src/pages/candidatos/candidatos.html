@@ -4,7 +4,8 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<div id="esmaecer"></div>
+
+
 <ion-header>
   <ion-navbar>
     <ion-title>candidatos</ion-title>
@@ -13,7 +14,7 @@
 
 
 <ion-content padding>
-  <section id="filter">
+  <section id="filter" class="some">
     <form class="formFilter">
     <ion-list [formGroup]="formulario_candidatos">
       <ion-item padding>
@@ -44,11 +45,11 @@
         <ion-label id="lbl_idade">Idade:</ion-label>
         <ion-input class="inputIdade" type="number" formControlName="idade" (keyup)="Valida('idade')" (blur)="Valida('idade')"></ion-input>
       </ion-item>
+      <button ion-button color="dark" id="botaoDefine" round>Definir</button>
     </ion-list>
     </form>
   </section>
-  <button ion-button color="light" id="botaofiltro">Filtros</button>
-  <ion-icon name="options"></ion-icon>
+  <button ion-button color="light" id="botaofiltro" data-target="#filter">Filtros <ion-icon id="icone" name="options"></ion-icon></button>
   <input class="searchbar-input" dir="auto" placeholder="Pesquisa por nome" type="search" autocomplete="off" autocorrect="off" spellcheck="false">
   <ion-card>
     <ion-item>

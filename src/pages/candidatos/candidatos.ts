@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { animate } from '@angular/core/src/animation/dsl';
 
 /**
  * Generated class for the CandidatosPage page.
@@ -20,15 +21,26 @@ export class CandidatosPage {
   }
 
   ionViewDidLoad() {
-    var x: number = 0;
-    document.getElementById('botaofiltro').addEventListener('click', function() {
-      if(x == 0) {
-        document.getElementById("filter").style.display = "flex";
-        x = 1;
+
+    const btn = document.getElementById('botaofiltro');
+    btn.addEventListener('click', (e) => {
+      
+      if (document.getElementById('filter').classList.contains('some')) {
+        document.getElementById('filter').classList.remove('some');
+        document.getElementById('filter').classList.add('aparece');
+      } else {
+        document.getElementById('filter').classList.remove('aparece');
+        document.getElementById('filter').classList.add('some');
       }
-      else {
-        document.getElementById("filter").style.display = "none";
-        x = 0;
+    });
+
+    const btn2 = document.getElementById('botaoDefine')
+    
+    btn2.addEventListener('click', (e) =>  {
+      //programem como ele vai enviar a pesquisa ao banco aqui ;)
+       if (document.getElementById('filter').classList.contains('aparece')) {
+        document.getElementById('filter').classList.remove('aparece');
+        document.getElementById('filter').classList.add('some');
       }
     });
   }
