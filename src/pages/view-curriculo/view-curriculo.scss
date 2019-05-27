@@ -1,0 +1,32 @@
+ion-icon {
+    display: inline-block;
+    font-size: 1.7em;
+}
+
+page-view-curriculo {
+
+    .icone{
+        width: 10em;
+        margin-left: 0.7em;
+    }
+
+    #finaldiv{
+        margin-bottom: 0.6em; 
+    }
+
+    .elementos_contato{
+        position: absolute;
+        margin: -20px 0 0 47px;
+    }
+
+
+    @media screen and (max-width:425px){
+        .fontes_mobile{
+            font-size: 14px;
+        }
+        .titulos_mobile{
+            font-size: 18px;
+        }
+    }
+
+}
