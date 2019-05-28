@@ -19,6 +19,27 @@ page-view-curriculo {
         margin: -20px 0 0 47px;
     }
 
+    .margem_esquerda{
+        margin: 0 0 0 17.6px;
+    }
+
+    .elementos_nacionalidade{
+        margin: -19px 0 0 156px; 
+    }
+
+    .elementos_nacionalidade:nth-child(2)
+    {
+        margin: -19px 0 0 100px;
+    }
+
+    .elementos_nacionalidade:nth-child(3)
+    {
+        margin: -31.8px 0 0 110px;
+    }
+
+    .descricao{
+        margin: -1.5em 0 0 0;
+    }
 
     @media screen and (max-width:425px){
         .fontes_mobile{
